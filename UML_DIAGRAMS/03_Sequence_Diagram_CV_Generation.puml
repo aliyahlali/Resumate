@@ -1,0 +1,77 @@
+@startuml Sequence Diagram - CV Generation Process
+
+' ============================================
+' SEQUENCE DIAGRAM - CV GENERATION PROCESS
+' ============================================
+
+actor User
+participant "Frontend\n(GenerateCV)" as Frontend
+participant "API Service" as API
+participant "CV Controller" as Controller
+participant "Auth Middleware" as Auth
+participant "OpenAI Service" as OpenAI
+participant "CV Parser" as Parser
+participant "HTML Generator" as HTMLGen
+participant "CV History\n(Model)" as Model
+participant "MongoDB" as DB
+
+User -> Frontend: Enter CV text and job description
+User -> Frontend: Select template
+User -> Frontend: Click "Generate CV"
+
+Frontend -> API: POST /api/cv/generate\n(cvText, jobDescription, template)
+
+API -> Controller: generateCV(req, res)
+
+Controller -> Auth: verifyToken(token)
+Auth --> Controller: User authenticated
+
+Controller -> OpenAI: optimizeCV(cvText, jobDescription)
+
+activate OpenAI
+OpenAI -> OpenAI: Clean input text
+OpenAI -> OpenAI: Build optimization prompt
+OpenAI -> OpenAI: Call OpenAI API
+OpenAI --> Controller: optimizedCVText
+deactivate OpenAI
+
+Controller -> Parser: parseCVText(optimizedCVText)
+
+activate Parser
+Parser -> Parser: extractProfile()
+Parser -> Parser: extractExperience()
+Parser -> Parser: extractEducation()
+Parser -> Parser: extractSkills()
+Parser -> Parser: extractProjects()
+Parser --> Controller: parsedData
+deactivate Parser
+
+Controller -> HTMLGen: generateCVHTML(parsedData, template)
+
+activate HTMLGen
+HTMLGen -> HTMLGen: prepareTemplateData()
+HTMLGen -> HTMLGen: formatDescriptions()
+HTMLGen -> HTMLGen: generateHTML()
+HTMLGen --> Controller: cvHTML
+deactivate HTMLGen
+
+Controller -> Model: new CVHistory({...})
+Controller -> Model: save()
+
+Model -> DB: Insert document
+DB --> Model: Document saved
+Model --> Controller: savedCV
+
+Controller --> API: Response { success: true, data: savedCV }
+API --> Frontend: Response with CV data
+
+Frontend -> Frontend: Display success message
+Frontend -> Frontend: Show generated CV preview
+Frontend -> Frontend: Enable download button
+
+User -> Frontend: Click "Download PDF"
+Frontend -> Frontend: Open print dialog with CV HTML
+
+@enduml
+
+

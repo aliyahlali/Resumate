@@ -1,0 +1,277 @@
+{
+  "common": {
+    "loading": "Kraunama...",
+    "error": "Klaida",
+    "success": "Sėkmė",
+    "cancel": "Atšaukti",
+    "save": "Išsaugoti",
+    "delete": "Ištrinti",
+    "edit": "Redaguoti",
+    "close": "Uždaryti",
+    "back": "Atgal",
+    "next": "Toliau",
+    "previous": "Ankstesnis",
+    "search": "Ieškoti",
+    "filter": "Filtruoti",
+    "sort": "Rūšiuoti"
+  },
+  "nav": {
+    "dashboard": "Skydelis",
+    "generate": "Generuoti",
+    "history": "Istorija",
+    "logout": "Atsijungti"
+  },
+  "auth": {
+    "login": "Prisijungti",
+    "register": "Sukurti paskyrą",
+    "email": "El. paštas",
+    "password": "Slaptažodis",
+    "confirmPassword": "Patvirtinti slaptažodį",
+    "signIn": "Prisijungti",
+    "signUp": "Registruotis",
+    "createMyAccount": "Sukurti mano paskyrą",
+    "createAccount": "Sukurti paskyrą",
+    "alreadyHaveAccount": "Jau turite paskyrą?",
+    "alreadyAccount": "Jau turite paskyrą?",
+    "noAccount": "Naujas Resumate?",
+    "createAccountFree": "Sukurti nemokamą paskyrą",
+    "loginTitle": "Prisijunkite prie savo paskyros",
+    "registerTitle": "Prisijunkite prie Resumate nemokamai",
+    "passwordMinLength": "Mažiausiai 6 simboliai",
+    "passwordTooShort": "Slaptažodis turi būti bent 6 simbolių",
+    "passwordMismatch": "Slaptažodžiai nesutampa",
+    "loginError": "Prisijungimo klaida",
+    "registerError": "Klaida kuriant paskyrą",
+    "termsAccept": "Sukurdami paskyrą, sutinkate su mūsų naudojimo sąlygomis"
+  },
+  "dashboard": {
+    "welcome": "Sveiki",
+    "title": "Kurkite AI optimizuotus CV",
+    "subtitle": "Transformuokite savo CV keliais paspaudimais ir padidinkite savo įdarbinimo galimybes",
+    "aiPlatform": "AI CV generavimo platforma",
+    "generateNow": "Generuoti CV dabar",
+    "viewHistory": "Peržiūrėti istoriją",
+    "stats": {
+      "totalCVs": "Iš viso sugeneruota CV",
+      "sinceRegistration": "Nuo registracijos",
+      "thisWeek": "CV šią savaitę",
+      "last7Days": "Paskutinės 7 dienos",
+      "avgTime": "Vidutinis laikas",
+      "perGeneration": "Vienam CV generavimui"
+    },
+    "quickActions": {
+      "generate": {
+        "title": "Generuoti CV",
+        "subtitle": "Sukurkite AI optimizuotą CV",
+        "description": "Įkelkite savo CV ir darbo aprašymą. Mūsų AI optimizuos jūsų CV, kad padidintų įdarbinimo galimybes:",
+        "feature1": "Praturtintas turinys su metrikomis",
+        "feature2": "Pritaikymas darbo raktažodžiams",
+        "feature3": "4 profesionalūs šablonai",
+        "button": "Pradėti dabar"
+      },
+      "history": {
+        "title": "Istorija",
+        "subtitle": "Pasiekite sugeneruotus CV",
+        "description": "Peržiūrėkite visus anksčiau sugeneruotus CV. Galite:",
+        "feature1": "Atsisiųsti kaip PDF",
+        "feature2": "Peržiūrėti internete",
+        "feature3": "Pakartotinai naudoti naujai pozicijai",
+        "button": "Peržiūrėti istoriją"
+      }
+    },
+    "howItWorks": {
+      "title": "Kaip tai veikia?",
+      "subtitle": "Keturi paprasti žingsniai, kad gautumėte AI optimizuotą CV",
+      "step1": {
+        "title": "Įkelkite savo CV",
+        "description": "Pridėkite dabartinio CV tekstą per OCR (PDF, Word, vaizdas) arba nukopijuokite"
+      },
+      "step2": {
+        "title": "Pridėkite aprašymą",
+        "description": "Įklijuokite visą darbo aprašymą, į kurį kreipiatės"
+      },
+      "step3": {
+        "title": "AI optimizavimas",
+        "description": "Mūsų AI praturtina jūsų CV metrikomis ir pritaiko pozicijai"
+      },
+      "step4": {
+        "title": "Atsisiųskite",
+        "description": "Atsisiųskite optimizuotą CV kaip PDF ir kreipkitės su pasitikėjimu"
+      }
+    },
+    "features": {
+      "ai": {
+        "title": "Pažangi AI",
+        "description": "Naudoja GPT-3.5 generuoti turtingus CV su metrikomis ir detaliais kontekstais"
+      },
+      "templates": {
+        "title": "4 profesionalūs šablonai",
+        "description": "Modernūs dizainai, pritaikyti visoms pramonės šakoms"
+      },
+      "fast": {
+        "title": "Greitas",
+        "description": "Generavimas per ~30 sekundžių su automatiniu OCR išskyrimu"
+      }
+    }
+  },
+  "generate": {
+    "title": "Generuoti optimizuotą CV",
+    "subtitle": "Sekite žingsnius, kad sukurtumėte AI optimizuotą CV",
+    "steps": {
+      "template": {
+        "title": "Šablonas",
+        "description": "Pasirinkite dizainą"
+      },
+      "cv": {
+        "title": "CV",
+        "description": "Jūsų dabartinis CV"
+      },
+      "job": {
+        "title": "Darbas",
+        "description": "Darbo aprašymas"
+      },
+      "generation": {
+        "title": "Generavimas",
+        "description": "AI optimizavimas"
+      }
+    },
+    "step1": {
+      "title": "1 žingsnis: Pasirinkite šabloną",
+      "subtitle": "Pasirinkite CV dizainą, kuris geriausiai atitinka jūsų profesinį profilį"
+    },
+    "step2a": {
+      "title": "2a žingsnis: Įkelkite savo CV (neprivaloma)",
+      "subtitle": "Priimami formatai: PDF, Word (.doc, .docx), vaizdai (PNG, JPG, JPEG)",
+      "extracting": "Išskiriamas tekstas...",
+      "extracted": "Tekstas sėkmingai išskirtas! ({{count}} simbolių)"
+    },
+    "step2b": {
+      "title": "2b žingsnis: Jūsų CV tekstas",
+      "required": "*",
+      "subtitle": "Tekstas bus automatiškai užpildytas, jei įkėlėte failą, kitu atveju įklijuokite jį čia",
+      "placeholder": "Įklijuokite dabartinio CV tekstą čia arba jis bus užpildytas automatiškai po įkėlimo...",
+      "charCount": "{{count}} simbolių (mažiausiai 50)",
+      "ready": "Paruošta!"
+    },
+    "step3": {
+      "title": "3 žingsnis: Darbo aprašymas",
+      "required": "*",
+      "subtitle": "Įklijuokite visą darbo aprašymą, į kurį kreipiatės. Kuo detaliau, tuo geresnis rezultatas!",
+      "placeholder": "Įklijuokite visą darbo aprašymą čia...",
+      "charCount": "{{count}} simbolių (mažiausiai 20, rekomenduojama 100+)"
+    },
+    "step4": {
+      "title": "Generuojamas jūsų optimizuotas CV",
+      "subtitle": "Mūsų AI dirba, kad sukurtų jūsų tobulą CV...",
+      "optimizing": "Optimizuojama...",
+      "duration": "Tai gali užtrukti 20-40 sekundžių",
+      "analyzing": "Analizuojamas jūsų CV...",
+      "extracting": "Išskiriami darbo raktažodžiai...",
+      "generating": "Generuojamas optimizuotas turinys...",
+      "success": "CV sėkmingai sugeneruotas!",
+      "successMessage": "Jūsų CV buvo optimizuotas ir paruoštas atsisiųsti",
+      "downloadPDF": "Atsisiųsti kaip PDF",
+      "viewHistory": "Peržiūrėti istorijoje",
+      "redirecting": "CV sėkmingai sugeneruotas! Nukreipiama į istoriją po 3 sekundžių..."
+    },
+    "navigation": {
+      "stepOf": "{{current}} žingsnis iš {{total}}",
+      "generateCV": "Generuoti CV"
+    },
+    "errors": {
+      "cvTooShort": "CV tekstas turi turėti bent 50 simbolių",
+      "jobTooShort": "Darbo aprašymas turi turėti bent 20 simbolių",
+      "extractionError": "Klaida išskiriant tekstą iš failo",
+      "generationError": "Klaida generuojant CV"
+    }
+  },
+  "history": {
+    "title": "CV istorija",
+    "subtitle": "{{count}} CV sugeneruotas",
+    "subtitle_plural": "{{count}} CV sugeneruota",
+    "generateNew": "Generuoti naują CV",
+    "search": "Ieškoti darbo aprašymuose...",
+    "sortNewest": "Naujausi",
+    "sortOldest": "Seniausi",
+    "resultsFound": "{{count}} rezultatas rastas",
+    "resultsFound_plural": "{{count}} rezultatų rasta",
+    "cvGenerated": "CV sugeneruotas",
+    "today": "Šiandien",
+    "yesterday": "Vakar",
+    "daysAgo": "Prieš {{count}} dienų",
+    "weeksAgo": "Prieš {{count}} savaičių",
+    "monthsAgo": "Prieš {{count}} mėnesių",
+    "jobDescription": "Darbo aprašymas:",
+    "viewButton": "Peržiūrėti",
+    "downloadButton": "PDF",
+    "newBadge": "Naujas",
+    "generatedOn": "Sugeneruota {{date}}",
+    "empty": {
+      "title": "Nėra sugeneruotų CV",
+      "description": "Dar nesugeneravote jokių CV. Pradėkite dabar ir sukurkite pirmąjį AI optimizuotą CV!",
+      "button": "Generuoti pirmąjį CV"
+    },
+    "noResults": {
+      "title": "Rezultatų nėra",
+      "description": "Jokie CV neatitinka jūsų paieškos \"{{query}}\"",
+      "button": "Išvalyti paiešką"
+    },
+    "modal": {
+      "title": "Optimizuotas CV",
+      "downloadPDF": "Atsisiųsti kaip PDF"
+    }
+  },
+  "branding": {
+    "tagline": "Kurkite AI optimizuotus CV",
+    "description": "Transformuokite savo CV keliais paspaudimais ir padidinkite savo įdarbinimo galimybes",
+    "joinThousands": "Prisijunkite prie tūkstančių vartotojų",
+    "createAccountFree": "Sukurkite nemokamą paskyrą ir pradėkite generuoti AI optimizuotus CV",
+    "features": {
+      "ai": {
+        "title": "Dirbtinis intelektas",
+        "description": "Automatinis optimizavimas su GPT-3.5 metrikų turtingiems CV"
+      },
+      "templates": {
+        "title": "4 profesionalūs šablonai",
+        "description": "Modernūs dizainai, pritaikyti visoms pramonės šakoms"
+      },
+      "fast": {
+        "title": "Greitas ir paprastas",
+        "description": "Generavimas per ~30 sekundžių su automatiniu OCR išskyrimu"
+      },
+      "unlimited": "Neribotasneribotų CV generavimas",
+      "ocr": "Automatinis OCR išskyrimas",
+      "historyAll": "Visų jūsų CV istorija",
+      "pdfExport": "Aukštos kokybės PDF eksportavimas",
+      "aiOptimization": "Pažangus AI optimizavimas",
+      "free": {
+        "title": "100% nemokama",
+        "description": "Nereikia kredito kortelės. Pradėkite kurti profesinius CV iš karto."
+      }
+    }
+  },
+  "register": {
+    "joinThousands": "Prisijunkite prie tūkstančių vartotojų",
+    "subtitle": "Sukurkite nemokamą paskyrą ir pradėkite generuoti AI optimizuotus CV",
+    "joinFree": "Prisijunkite prie Resumate nemokamai",
+    "benefits": {
+      "unlimited": "Neribotų CV generavimas",
+      "templates": "4 profesionalūs šablonai",
+      "ocr": "Automatinis OCR išskyrimas",
+      "history": "Visų jūsų CV istorija",
+      "pdf": "Aukštos kokybės PDF eksportavimas",
+      "ai": "Pažangus AI optimizavimas"
+    },
+    "free": {
+      "title": "100% nemokama",
+      "description": "Nereikia kredito kortelės. Pradėkite kurti profesinius CV iš karto."
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Resumate. Visos teisės saugomos.",
+    "about": "Apie",
+    "privacy": "Privatumas",
+    "terms": "Sąlygos",
+    "support": "Palaikymas"
+  }
+}

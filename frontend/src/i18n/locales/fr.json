@@ -1,0 +1,429 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "generate": "Generate",
+    "create": "Créer à partir de zéro",
+    "history": "History",
+    "admin": "Admin Panel",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": "Connexion",
+    "register": "Créer un compte",
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "signIn": "Se connecter",
+    "signUp": "Créer mon compte",
+    "createMyAccount": "Créer mon compte",
+    "createAccount": "Créer un compte",
+    "alreadyHaveAccount": "Déjà un compte ?",
+    "alreadyAccount": "Déjà un compte ?",
+    "noAccount": "Nouveau sur Resumate ?",
+    "createAccountFree": "Créer un compte gratuitement",
+    "loginTitle": "Connectez-vous pour accéder à votre compte",
+    "registerTitle": "Rejoignez Resumate gratuitement",
+    "passwordMinLength": "Minimum 6 caractères",
+    "passwordTooShort": "Le mot de passe doit contenir au moins 6 caractères",
+    "passwordMismatch": "Les mots de passe ne correspondent pas",
+    "loginError": "Erreur de connexion",
+    "registerError": "Erreur lors de la création du compte",
+    "termsAccept": "En créant un compte, vous acceptez nos conditions d'utilisation"
+  },
+  "dashboard": {
+    "welcome": "Bienvenue",
+    "title": "Créez des CV optimisés par IA",
+    "subtitle": "Transformez votre CV en quelques clics et maximisez vos chances d'être recruté",
+    "aiPlatform": "Plateforme IA de génération de CV",
+    "generateNow": "Générer un CV maintenant",
+    "viewHistory": "Voir l'historique",
+    "stats": {
+      "totalCVs": "Total de CV générés",
+      "sinceRegistration": "Depuis votre inscription",
+      "thisWeek": "CV cette semaine",
+      "last7Days": "7 derniers jours",
+      "avgTime": "Temps moyen",
+      "perGeneration": "Par génération de CV"
+    },
+    "quickActions": {
+      "generate": {
+        "title": "Générer un CV",
+        "subtitle": "Créez un CV optimisé par IA",
+        "description": "Uploadez votre CV et la description du poste. Notre IA optimisera votre CV pour maximiser vos chances d'être recruté avec :",
+        "feature1": "Contenu enrichi avec métriques",
+        "feature2": "Adaptation aux mots-clés du poste",
+        "feature3": "4 templates professionnels",
+        "button": "Commencer maintenant"
+      },
+      "history": {
+        "title": "Historique",
+        "subtitle": "Accédez à vos CV générés",
+        "description": "Consultez tous vos CV générés précédemment. Vous pouvez :",
+        "feature1": "Télécharger en PDF",
+        "feature2": "Prévisualiser en ligne",
+        "feature3": "Réutiliser pour un nouveau poste",
+        "button": "Voir l'historique"
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça marche ?",
+      "subtitle": "Quatre étapes simples pour obtenir un CV optimisé par IA",
+      "step1": {
+        "title": "Uploadez votre CV",
+        "description": "Ajoutez le texte de votre CV actuel via OCR (PDF, Word, Image) ou copier-coller"
+      },
+      "step2": {
+        "title": "Ajoutez la description",
+        "description": "Collez la description complète du poste pour lequel vous postulez"
+      },
+      "step3": {
+        "title": "Optimisation IA",
+        "description": "Notre IA enrichit votre CV avec des métriques et l'adapte au poste"
+      },
+      "step4": {
+        "title": "Téléchargez",
+        "description": "Téléchargez votre CV optimisé en PDF et postulez avec confiance"
+      }
+    },
+    "features": {
+      "ai": {
+        "title": "IA Avancée",
+        "description": "Utilise GPT-3.5 pour générer des CV riches avec métriques et contextes détaillés"
+      },
+      "templates": {
+        "title": "4 Templates Pro",
+        "description": "Designs modernes adaptés à tous les secteurs d'activité"
+      },
+      "fast": {
+        "title": "Rapide",
+        "description": "Génération en ~30 secondes avec extraction OCR automatique"
+      }
+    }
+  },
+  "generate": {
+    "title": "Générer un CV Optimisé",
+    "subtitle": "Suivez les étapes pour créer votre CV optimisé par IA",
+    "steps": {
+      "template": {
+        "title": "Template",
+        "description": "Choisissez un design"
+      },
+      "cv": {
+        "title": "CV",
+        "description": "Votre CV actuel"
+      },
+      "job": {
+        "title": "Poste",
+        "description": "Description du poste"
+      },
+      "generation": {
+        "title": "Génération",
+        "description": "Optimisation IA"
+      }
+    },
+    "step1": {
+      "title": "Étape 1 : Choisissez votre template",
+      "subtitle": "Sélectionnez le design de CV qui correspond le mieux à votre profil professionnel"
+    },
+    "step2a": {
+      "title": "Étape 2a : Uploader votre CV (Optionnel)",
+      "subtitle": "Formats acceptés: PDF, Word (.doc, .docx), Images (PNG, JPG, JPEG)",
+      "extracting": "Extraction du texte en cours...",
+      "extracted": "Texte extrait avec succès ! ({{count}} caractères)"
+    },
+    "step2b": {
+      "title": "Étape 2b : Texte de votre CV",
+      "required": "*",
+      "subtitle": "Le texte sera automatiquement rempli si vous avez uploadé un fichier, sinon collez-le ici",
+      "placeholder": "Collez ici le texte de votre CV actuel ou il sera rempli automatiquement après l'upload...",
+      "charCount": "{{count}} caractères (minimum 50)",
+      "ready": "Prêt !"
+    },
+    "step3": {
+      "title": "Étape 3 : Description du poste",
+      "required": "*",
+      "subtitle": "Collez la description complète du poste pour lequel vous postulez. Plus elle est détaillée, meilleur sera le résultat !",
+      "placeholder": "Collez ici la description complète du poste...",
+      "charCount": "{{count}} caractères (minimum 20, recommandé 100+)"
+    },
+    "step4": {
+      "title": "Génération de votre CV optimisé",
+      "subtitle": "Notre IA travaille pour créer votre CV parfait...",
+      "optimizing": "Optimisation en cours...",
+      "duration": "Cela peut prendre 20-40 secondes",
+      "analyzing": "Analyse de votre CV...",
+      "extracting": "Extraction des mots-clés du poste...",
+      "generating": "Génération du contenu optimisé...",
+      "success": "CV généré avec succès !",
+      "successMessage": "Votre CV a été optimisé et est prêt à être téléchargé",
+      "downloadPDF": "Télécharger en PDF",
+      "viewHistory": "Voir dans l'historique",
+      "redirecting": "CV généré avec succès ! Redirection vers l'historique dans 3 secondes..."
+    },
+    "navigation": {
+      "stepOf": "Étape {{current}} sur {{total}}",
+      "generateCV": "Générer le CV"
+    },
+    "errors": {
+      "cvTooShort": "Le texte du CV doit contenir au moins 50 caractères",
+      "jobTooShort": "La description du poste doit contenir au moins 20 caractères",
+      "extractionError": "Erreur lors de l'extraction du texte du fichier",
+      "generationError": "Erreur lors de la génération du CV"
+    }
+  },
+  "history": {
+    "title": "Historique des CV",
+    "subtitle": "{{count}} CV généré",
+    "subtitle_plural": "{{count}} CV générés",
+    "generateNew": "Générer un nouveau CV",
+    "search": "Rechercher dans les descriptions de poste...",
+    "sortNewest": "Plus récent",
+    "sortOldest": "Plus ancien",
+    "resultsFound": "{{count}} résultat trouvé",
+    "resultsFound_plural": "{{count}} résultats trouvés",
+    "cvGenerated": "CV généré",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "daysAgo": "Il y a {{count}} jours",
+    "weeksAgo": "Il y a {{count}} semaines",
+    "monthsAgo": "Il y a {{count}} mois",
+    "jobDescription": "Description du poste :",
+    "viewButton": "Voir",
+    "downloadButton": "PDF",
+    "newBadge": "Nouveau",
+    "generatedOn": "Généré le {{date}}",
+    "empty": {
+      "title": "Aucun CV généré",
+      "description": "Vous n'avez pas encore généré de CV. Commencez maintenant et créez votre premier CV optimisé par IA !",
+      "button": "Générer mon premier CV"
+    },
+    "noResults": {
+      "title": "Aucun résultat",
+      "description": "Aucun CV ne correspond à votre recherche \"{{query}}\"",
+      "button": "Effacer la recherche"
+    },
+    "modal": {
+      "title": "CV Optimisé",
+      "downloadPDF": "Télécharger en PDF"
+    }
+  },
+  "branding": {
+    "tagline": "Créez des CV optimisés par IA",
+    "description": "Transformez votre CV en quelques clics et maximisez vos chances d'être recruté",
+    "joinThousands": "Rejoignez des milliers d'utilisateurs",
+    "createAccountFree": "Créez votre compte gratuitement et commencez à générer des CV optimisés par IA",
+    "features": {
+      "ai": {
+        "title": "Intelligence Artificielle",
+        "description": "Optimisation automatique avec GPT-3.5 pour des CV riches en métriques"
+      },
+      "templates": {
+        "title": "4 Templates Professionnels",
+        "description": "Designs modernes adaptés à tous les secteurs d'activité"
+      },
+      "fast": {
+        "title": "Rapide et Facile",
+        "description": "Génération en ~30 secondes avec extraction OCR automatique"
+      },
+      "unlimited": "Génération illimitée de CV",
+      "ocr": "Extraction OCR automatique",
+      "historyAll": "Historique de tous vos CV",
+      "pdfExport": "Export PDF haute qualité",
+      "aiOptimization": "Optimisation IA avancée",
+      "free": {
+        "title": "100% Gratuit",
+        "description": "Aucune carte bancaire requise. Commencez immédiatement à créer des CV professionnels."
+      }
+    }
+  },
+  "register": {
+    "joinThousands": "Rejoignez des milliers d'utilisateurs",
+    "subtitle": "Créez votre compte gratuitement et commencez à générer des CV optimisés par IA",
+    "joinFree": "Rejoignez Resumate gratuitement",
+    "benefits": {
+      "unlimited": "Génération illimitée de CV",
+      "templates": "4 templates professionnels",
+      "ocr": "Extraction OCR automatique",
+      "history": "Historique de tous vos CV",
+      "pdf": "Export PDF haute qualité",
+      "ai": "Optimisation IA avancée"
+    },
+    "free": {
+      "title": "100% Gratuit",
+      "description": "Aucune carte bancaire requise. Commencez immédiatement à créer des CV professionnels."
+    }
+  },
+  "createCV": {
+    "title": "Créer un CV depuis zéro",
+    "subtitle": "Remplissez le formulaire pour créer votre CV professionnel",
+    "template": {
+      "title": "Choisissez un template",
+      "subtitle": "Sélectionnez le design de CV qui correspond le mieux à votre profil"
+    },
+    "personalInfo": {
+      "title": "Informations personnelles",
+      "subtitle": "Vos coordonnées et informations de base",
+      "name": "Nom complet",
+      "namePlaceholder": "Jean Dupont",
+      "jobTitle": "Titre du poste",
+      "jobTitlePlaceholder": "Développeur Full Stack",
+      "email": "Email",
+      "emailPlaceholder": "jean.dupont@example.com",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+33 6 12 34 56 78",
+      "address": "Adresse",
+      "addressPlaceholder": "Paris, France",
+      "website": "Site web / LinkedIn",
+      "websitePlaceholder": "https://linkedin.com/in/jeandupont"
+    },
+    "profile": {
+      "title": "Profil professionnel",
+      "subtitle": "Résumé de votre parcours et de vos compétences",
+      "placeholder": "Décrivez votre profil professionnel, vos compétences principales et vos objectifs de carrière..."
+    },
+    "experience": {
+      "title": "Expérience professionnelle",
+      "subtitle": "Ajoutez vos expériences professionnelles",
+      "positionPlaceholder": "Poste occupé",
+      "companyPlaceholder": "Nom de l'entreprise",
+      "locationPlaceholder": "Lieu (ville, pays)",
+      "periodPlaceholder": "Période (ex: 2020 - 2023)",
+      "descriptionPlaceholder": "Description de vos responsabilités et réalisations...",
+      "add": "Ajouter une expérience"
+    },
+    "education": {
+      "title": "Formation",
+      "subtitle": "Ajoutez vos diplômes et formations",
+      "institutionPlaceholder": "Établissement (Université, École...)",
+      "degreePlaceholder": "Diplôme obtenu",
+      "periodPlaceholder": "Période (ex: 2016 - 2020)",
+      "add": "Ajouter une formation"
+    },
+    "skills": {
+      "title": "Compétences",
+      "subtitle": "Listez vos compétences techniques et professionnelles",
+      "placeholder": "Ex: JavaScript, React, Node.js...",
+      "add": "Ajouter"
+    },
+    "languages": {
+      "title": "Langues",
+      "subtitle": "Indiquez les langues que vous maîtrisez",
+      "placeholder": "Ex: Français (Natif), Anglais (Courant)...",
+      "add": "Ajouter"
+    },
+    "projects": {
+      "title": "Projets",
+      "subtitle": "Ajoutez vos projets personnels ou professionnels",
+      "namePlaceholder": "Nom du projet",
+      "periodPlaceholder": "Période (optionnel)",
+      "descriptionPlaceholder": "Description du projet...",
+      "add": "Ajouter un projet"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "subtitle": "Listez vos certifications professionnelles",
+      "placeholder": "Ex: AWS Certified Solutions Architect...",
+      "add": "Ajouter"
+    },
+    "references": {
+      "title": "Références",
+      "subtitle": "Ajoutez vos références professionnelles",
+      "namePlaceholder": "Nom complet",
+      "titlePlaceholder": "Titre / Poste",
+      "phonePlaceholder": "Téléphone",
+      "emailPlaceholder": "Email",
+      "phone": "Téléphone",
+      "email": "Email",
+      "add": "Ajouter une référence"
+    },
+    "generate": "Générer le CV",
+    "generating": "Génération en cours...",
+    "loading": {
+      "title": "Génération de votre CV",
+      "subtitle": "Création de votre CV professionnel en cours..."
+    },
+    "success": {
+      "title": "CV créé avec succès !",
+      "message": "Votre CV a été créé et est prêt à être téléchargé",
+      "downloadPDF": "Télécharger en PDF",
+      "viewHistory": "Voir dans l'historique",
+      "redirecting": "CV créé avec succès ! Redirection vers l'historique dans 3 secondes..."
+    },
+    "errors": {
+      "nameRequired": "Le nom est obligatoire",
+      "generationError": "Erreur lors de la création du CV"
+    }
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "subtitle": "Manage users and platform statistics",
+    "loading": "Loading admin data...",
+    "stats": {
+      "totalUsers": "Total Users",
+      "recentUsers": "+{{count}} this week",
+      "totalCVs": "Total CVs Generated",
+      "recentCVs": "+{{count}} this week",
+      "avgCVs": "Average CVs",
+      "perUser": "Per user",
+      "admins": "Administrators",
+      "clients": "{{count}} clients"
+    },
+    "topUsers": {
+      "title": "Most active users",
+      "subtitle": "Top 5 users by number of generated CVs",
+      "cvs": "CVs"
+    },
+    "users": {
+      "title": "User management",
+      "subtitle": "{{count}} user(s)",
+      "search": "Search by email or role...",
+      "noResults": "No users found",
+      "roleAdmin": "Administrator",
+      "roleClient": "Client",
+      "cvCount": "{{count}} CVs",
+      "delete": "Delete",
+      "currentUser": "You"
+    },
+    "deleteDialog": {
+      "title": "Confirm deletion",
+      "description": "Are you sure you want to delete user {{email}}?",
+      "warning": "⚠️ Warning: This action cannot be undone!",
+      "consequence1": "The user will be permanently deleted",
+      "consequence2": "All their CVs ({{count}}) will be deleted",
+      "consequence3": "They will no longer be able to log in to the platform",
+      "deleting": "Deleting...",
+      "confirm": "Confirm deletion"
+    },
+    "success": {
+      "userDeleted": "User {{email}} deleted successfully"
+    },
+    "errors": {
+      "loadError": "Error while loading admin data",
+      "deleteError": "Error while deleting the user"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Resumate. Tous droits réservés.",
+    "about": "À propos",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "support": "Support"
+  }
+}
+

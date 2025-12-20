@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagramme de Classes - Resumate</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #diagram {
+            text-align: center;
+            margin: 30px 0;
+            overflow-x: auto;
+            background: white;
+            padding: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .download-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .download-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .download-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .info {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            border-left: 4px solid #2196F3;
+        }
+        .info p {
+            margin: 5px 0;
+            color: #1976D2;
+        }
+        #status {
+            text-align: center;
+            margin: 10px 0;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Diagramme de Classes - Système Resumate</h1>
+        
+        <div id="status">Chargement du diagramme...</div>
+        
+        <div id="diagram">
+            <div class="mermaid">
+classDiagram
+    class User {
+        -ObjectId _id
+        -String email
+        -String password
+        -String role
+        -Date createdAt
+        +matchPassword() Boolean
+        +save() User
+    }
+
+    class CVHistory {
+        -ObjectId _id
+        -ObjectId user
+        -String originalCVText
+        -String jobDescription
+        -String optimizedCVText
+        -String cvHTML
+        -Date createdAt
+        +save() CVHistory
+    }
+
+    class OpenAIService {
+        -OpenAI openai
+        +optimizeCV() String
+        -cleanExplanatoryText() String
+    }
+
+    class CVParser {
+        +parseCVText() Object
+        +extractProfile() Object
+        +extractExperience() Array
+        +extractEducation() Array
+        +extractSkills() Array
+        +extractProjects() Array
+    }
+
+    class HTMLGeneratorService {
+        +generateCVHTML() String
+        +prepareModernProfessionalData() Object
+        +prepareCleanMinimalData() Object
+        +prepareProfessionalClassicData() Object
+        +formatDescription() String
+    }
+
+    class OCRService {
+        +extractTextFromPDF() String
+        +extractTextFromImage() String
+        +extractTextFromWord() String
+    }
+
+    class TextCleaner {
+        +cleanText() String
+        +removeNoise() String
+    }
+
+    class AuthController {
+        +register() Response
+        +login() Response
+        +getMe() Response
+    }
+
+    class CVController {
+        +generateCV() Response
+        +getHistory() Response
+        +getCVById() Response
+    }
+
+    class UploadController {
+        +extractText() Response
+    }
+
+    class AuthMiddleware {
+        +protect() void
+        +verifyToken() Object
+    }
+
+    class UploadMiddleware {
+        +uploadFile() void
+    }
+
+    class AuthContext {
+        -User user
+        -String token
+        -Boolean loading
+        +login() Promise
+        +register() Promise
+        +logout() void
+    }
+
+    class Dashboard {
+        -Object stats
+        -Boolean loading
+        +fetchStats() void
+        +render() JSX
+    }
+
+    class GenerateCV {
+        -String cvText
+        -String jobDescription
+        -String selectedTemplate
+        -Number currentStep
+        +handleSubmit() void
+        +handleFileUpload() void
+    }
+
+    class History {
+        -Array cvList
+        -Array filteredList
+        -String searchQuery
+        +fetchHistory() void
+        +filterAndSortCVs() void
+    }
+
+    class LanguageSelector {
+        -String currentLanguage
+        +changeLanguage() void
+    }
+
+    class APIService {
+        +AuthService authService
+        +CVService cvService
+        +UploadService uploadService
+    }
+
+    class AuthService {
+        +login() Promise
+        +register() Promise
+        +getMe() Promise
+    }
+
+    class CVService {
+        +generate() Promise
+        +getHistory() Promise
+        +getById() Promise
+    }
+
+    class UploadService {
+        +extractText() Promise
+    }
+
+    User "1" --o "0..*" CVHistory : has many
+    
+    AuthController ..> User : uses
+    AuthController ..> AuthMiddleware : uses
+    CVController ..> CVHistory : uses
+    CVController ..> OpenAIService : uses
+    CVController ..> CVParser : uses
+    CVController ..> HTMLGeneratorService : uses
+    UploadController ..> OCRService : uses
+    OpenAIService ..> CVParser : uses
+    CVParser ..> HTMLGeneratorService : uses
+    HTMLGeneratorService ..> CVHistory : saves
+    
+    AuthContext ..> AuthService : uses
+    Dashboard ..> CVService : uses
+    GenerateCV ..> CVService : uses
+    GenerateCV ..> UploadService : uses
+    History ..> CVService : uses
+    APIService ..> AuthService : contains
+    APIService ..> CVService : contains
+    APIService ..> UploadService : contains
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="download-btn" id="pngBtn" onclick="downloadAsPNG()" disabled>
+                📥 Télécharger en PNG (Haute Qualité)
+            </button>
+            <button class="download-btn" id="svgBtn" onclick="downloadAsSVG()" disabled>
+                📥 Télécharger en SVG (Vectoriel)
+            </button>
+        </div>
+
+        <div class="info">
+            <p><strong>📌 Instructions:</strong></p>
+            <p>• Attendez que le diagramme se charge complètement</p>
+            <p>• PNG: Image haute résolution pour présentations</p>
+            <p>• SVG: Format vectoriel pour impression et zoom infini</p>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            securityLevel: 'loose'
+        });
+
+        // Attendre que Mermaid finisse de rendre
+        setTimeout(() => {
+            const svg = document.querySelector('.mermaid svg');
+            if (svg) {
+                document.getElementById('status').textContent = '✅ Diagramme chargé - Vous pouvez télécharger';
+                document.getElementById('pngBtn').disabled = false;
+                document.getElementById('svgBtn').disabled = false;
+            } else {
+                document.getElementById('status').textContent = '⚠️ Erreur de chargement - Rafraîchissez la page';
+            }
+        }, 2000);
+
+        function downloadAsPNG() {
+            const btn = document.getElementById('pngBtn');
+            btn.textContent = '⏳ Génération en cours...';
+            btn.disabled = true;
+
+            const diagramDiv = document.getElementById('diagram');
+            
+            html2canvas(diagramDiv, {
+                scale: 3,
+                backgroundColor: '#ffffff',
+                logging: false
+            }).then(canvas => {
+                canvas.toBlob(blob => {
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.download = 'diagramme-classes-resumate.png';
+                    link.href = url;
+                    link.click();
+                    URL.revokeObjectURL(url);
+                    
+                    btn.textContent = '✅ Téléchargé!';
+                    setTimeout(() => {
+                        btn.textContent = '📥 Télécharger en PNG (Haute Qualité)';
+                        btn.disabled = false;
+                    }, 2000);
+                });
+            }).catch(err => {
+                alert('Erreur: ' + err.message);
+                btn.textContent = '📥 Télécharger en PNG (Haute Qualité)';
+                btn.disabled = false;
+            });
+        }
+
+        function downloadAsSVG() {
+            const btn = document.getElementById('svgBtn');
+            btn.textContent = '⏳ Génération en cours...';
+            btn.disabled = true;
+
+            try {
+                const svg = document.querySelector('.mermaid svg');
+                if (!svg) {
+                    alert('Erreur: SVG non trouvé');
+                    btn.disabled = false;
+                    return;
+                }
+
+                const clonedSvg = svg.cloneNode(true);
+                clonedSvg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+                
+                const svgData = new XMLSerializer().serializeToString(clonedSvg);
+                const blob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+                const url = URL.createObjectURL(blob);
+                
+                const link = document.createElement('a');
+                link.download = 'diagramme-classes-resumate.svg';
+                link.href = url;
+                link.click();
+                URL.revokeObjectURL(url);
+                
+                btn.textContent = '✅ Téléchargé!';
+                setTimeout(() => {
+                    btn.textContent = '📥 Télécharger en SVG (Vectoriel)';
+                    btn.disabled = false;
+                }, 2000);
+            } catch (error) {
+                alert('Erreur: ' + error.message);
+                btn.textContent = '📥 Télécharger en SVG (Vectoriel)';
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>

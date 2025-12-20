@@ -1,0 +1,58 @@
+@startuml State Diagram - User Authentication States
+
+' ============================================
+' STATE DIAGRAM - USER AUTHENTICATION STATES
+' ============================================
+
+[*] --> NotAuthenticated : Initial state
+
+NotAuthenticated : User not logged in
+NotAuthenticated : No access to protected routes
+
+NotAuthenticated --> Registering : User clicks register
+Registering --> NotAuthenticated : Registration failed
+Registering --> Authenticated : Registration successful
+
+NotAuthenticated --> LoggingIn : User enters credentials
+LoggingIn --> NotAuthenticated : Invalid credentials
+LoggingIn --> Authenticated : Login successful
+
+Authenticated : User logged in
+Authenticated : JWT token stored
+Authenticated : Access to all features
+
+Authenticated --> ViewingDashboard : Navigate to dashboard
+Authenticated --> GeneratingCV : Navigate to generate CV
+Authenticated --> ViewingHistory : Navigate to history
+Authenticated --> ViewingProfile : View profile
+
+ViewingDashboard --> Authenticated : Navigate away
+GeneratingCV --> Authenticated : Navigate away
+ViewingHistory --> Authenticated : Navigate away
+ViewingProfile --> Authenticated : Navigate away
+
+Authenticated --> LoggingOut : User clicks logout
+LoggingOut --> NotAuthenticated : Logout successful
+
+Authenticated --> TokenExpired : JWT token expired
+TokenExpired --> NotAuthenticated : Redirect to login
+
+note right of Authenticated
+  User can:
+  - Generate CVs
+  - View history
+  - Download CVs
+  - Change language
+  - Update profile
+end note
+
+note right of NotAuthenticated
+  User can:
+  - Register new account
+  - Login
+  - View public pages
+end note
+
+@enduml
+
+

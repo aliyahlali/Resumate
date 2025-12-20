@@ -1,0 +1,109 @@
+@startuml Use Case Diagram - Resumate System
+
+' ============================================
+' USE CASE DIAGRAM - RESUMATE SYSTEM
+' ============================================
+
+left to right direction
+
+actor "User" as user
+actor "Admin" as admin
+
+rectangle "Resumate System" {
+  package "Authentication" {
+    usecase "Register Account" as UC1
+    usecase "Login" as UC2
+    usecase "Logout" as UC3
+    usecase "View Profile" as UC4
+  }
+
+  package "CV Generation" {
+    usecase "Upload CV File" as UC5
+    usecase "Extract Text from File" as UC6
+    usecase "Enter CV Text" as UC7
+    usecase "Enter Job Description" as UC8
+    usecase "Select Template" as UC9
+    usecase "Generate Optimized CV" as UC10
+    usecase "Preview Generated CV" as UC11
+    usecase "Download CV as PDF" as UC12
+  }
+
+  package "CV Management" {
+    usecase "View CV History" as UC13
+    usecase "Search CVs" as UC14
+    usecase "Sort CVs" as UC15
+    usecase "View CV Details" as UC16
+    usecase "Delete CV" as UC17
+  }
+
+  package "Internationalization" {
+    usecase "Change Language" as UC18
+    usecase "View Dashboard in Selected Language" as UC19
+  }
+
+  package "Administration" {
+    usecase "Manage Users" as UC20
+    usecase "View System Statistics" as UC21
+    usecase "Manage Templates" as UC22
+  }
+}
+
+' User associations
+user --> UC1
+user --> UC2
+user --> UC3
+user --> UC4
+user --> UC5
+user --> UC6
+user --> UC7
+user --> UC8
+user --> UC9
+user --> UC10
+user --> UC11
+user --> UC12
+user --> UC13
+user --> UC14
+user --> UC15
+user --> UC16
+user --> UC17
+user --> UC18
+user --> UC19
+
+' Admin associations
+admin --> UC20
+admin --> UC21
+admin --> UC22
+admin --> UC1
+admin --> UC2
+admin --> UC3
+
+' Include relationships
+UC5 ..> UC6 : <<include>>
+UC10 ..> UC5 : <<include>>
+UC10 ..> UC7 : <<include>>
+UC10 ..> UC8 : <<include>>
+UC10 ..> UC9 : <<include>>
+UC11 ..> UC10 : <<include>>
+UC12 ..> UC10 : <<include>>
+UC13 ..> UC16 : <<include>>
+UC14 ..> UC13 : <<extend>>
+UC15 ..> UC13 : <<extend>>
+
+' Extend relationships
+UC6 ..> UC5 : <<extend>>
+UC11 ..> UC10 : <<extend>>
+UC12 ..> UC10 : <<extend>>
+
+note right of UC10
+  Uses OpenAI API to optimize
+  CV content based on job description
+end note
+
+note right of UC6
+  Supports PDF, Word, and Image files
+  Uses OCR technology
+end note
+
+@enduml
+
+

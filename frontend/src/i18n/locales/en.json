@@ -1,0 +1,380 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "generate": "Generate",
+    "create": "Create from scratch",
+    "history": "History",
+    "admin": "Admin Panel",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Create Account",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "createMyAccount": "Create My Account",
+    "createAccount": "Create Account",
+    "alreadyHaveAccount": "Already have an account?",
+    "alreadyAccount": "Already have an account?",
+    "noAccount": "New to Resumate?",
+    "createAccountFree": "Create a free account",
+    "loginTitle": "Sign in to your account",
+    "registerTitle": "Join Resumate for free",
+    "passwordMinLength": "Minimum 6 characters",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "passwordMismatch": "Passwords do not match",
+    "loginError": "Login error",
+    "registerError": "Error creating account",
+    "termsAccept": "By creating an account, you accept our terms of use"
+  },
+  "dashboard": {
+    "welcome": "Welcome",
+    "title": "Create AI-optimized CVs",
+    "subtitle": "Transform your CV in a few clicks and maximize your chances of getting hired",
+    "aiPlatform": "AI CV Generation Platform",
+    "generateNow": "Generate CV Now",
+    "viewHistory": "View History",
+    "stats": {
+      "totalCVs": "Total CVs Generated",
+      "sinceRegistration": "Since registration",
+      "thisWeek": "CVs This Week",
+      "last7Days": "Last 7 days",
+      "avgTime": "Average Time",
+      "perGeneration": "Per CV generation"
+    },
+    "quickActions": {
+      "generate": {
+        "title": "Generate CV",
+        "subtitle": "Create an AI-optimized CV",
+        "description": "Upload your CV and job description. Our AI will optimize your CV to maximize your hiring chances with:",
+        "feature1": "Enriched content with metrics",
+        "feature2": "Adaptation to job keywords",
+        "feature3": "4 professional templates",
+        "button": "Start Now"
+      },
+      "history": {
+        "title": "History",
+        "subtitle": "Access your generated CVs",
+        "description": "View all your previously generated CVs. You can:",
+        "feature1": "Download as PDF",
+        "feature2": "Preview online",
+        "feature3": "Reuse for a new position",
+        "button": "View History"
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works?",
+      "subtitle": "Four simple steps to get an AI-optimized CV",
+      "step1": {
+        "title": "Upload Your CV",
+        "description": "Add your current CV text via OCR (PDF, Word, Image) or copy-paste"
+      },
+      "step2": {
+        "title": "Add Description",
+        "description": "Paste the complete job description you're applying for"
+      },
+      "step3": {
+        "title": "AI Optimization",
+        "description": "Our AI enriches your CV with metrics and adapts it to the position"
+      },
+      "step4": {
+        "title": "Download",
+        "description": "Download your optimized CV as PDF and apply with confidence"
+      }
+    },
+    "features": {
+      "ai": {
+        "title": "Advanced AI",
+        "description": "Uses GPT-3.5 to generate rich CVs with metrics and detailed contexts"
+      },
+      "templates": {
+        "title": "4 Pro Templates",
+        "description": "Modern designs adapted to all industries"
+      },
+      "fast": {
+        "title": "Fast",
+        "description": "Generation in ~30 seconds with automatic OCR extraction"
+      }
+    }
+  },
+  "generate": {
+    "title": "Generate Optimized CV",
+    "subtitle": "Follow the steps to create your AI-optimized CV",
+    "steps": {
+      "template": {
+        "title": "Template",
+        "description": "Choose a design"
+      },
+      "cv": {
+        "title": "CV",
+        "description": "Your current CV"
+      },
+      "job": {
+        "title": "Job",
+        "description": "Job description"
+      },
+      "generation": {
+        "title": "Generation",
+        "description": "AI optimization"
+      }
+    },
+    "step1": {
+      "title": "Step 1: Choose Your Template",
+      "subtitle": "Select the CV design that best matches your professional profile"
+    },
+    "step2a": {
+      "title": "Step 2a: Upload Your CV (Optional)",
+      "subtitle": "Accepted formats: PDF, Word (.doc, .docx), Images (PNG, JPG, JPEG)",
+      "extracting": "Extracting text...",
+      "extracted": "Text extracted successfully! ({{count}} characters)"
+    },
+    "step2b": {
+      "title": "Step 2b: Your CV Text",
+      "required": "*",
+      "subtitle": "The text will be automatically filled if you uploaded a file, otherwise paste it here",
+      "placeholder": "Paste your current CV text here or it will be filled automatically after upload...",
+      "charCount": "{{count}} characters (minimum 50)",
+      "ready": "Ready!"
+    },
+    "step3": {
+      "title": "Step 3: Job Description",
+      "required": "*",
+      "subtitle": "Paste the complete job description you're applying for. The more detailed, the better the result!",
+      "placeholder": "Paste the complete job description here...",
+      "charCount": "{{count}} characters (minimum 20, recommended 100+)"
+    },
+    "step4": {
+      "title": "Generating Your Optimized CV",
+      "subtitle": "Our AI is working to create your perfect CV...",
+      "optimizing": "Optimizing...",
+      "duration": "This may take 20-40 seconds",
+      "analyzing": "Analyzing your CV...",
+      "extracting": "Extracting job keywords...",
+      "generating": "Generating optimized content...",
+      "success": "CV Generated Successfully!",
+      "successMessage": "Your CV has been optimized and is ready to download",
+      "downloadPDF": "Download as PDF",
+      "viewHistory": "View in History",
+      "redirecting": "CV generated successfully! Redirecting to history in 3 seconds..."
+    },
+    "navigation": {
+      "stepOf": "Step {{current}} of {{total}}",
+      "generateCV": "Generate CV"
+    },
+    "errors": {
+      "cvTooShort": "CV text must contain at least 50 characters",
+      "jobTooShort": "Job description must contain at least 20 characters",
+      "extractionError": "Error extracting text from file",
+      "generationError": "Error generating CV"
+    }
+  },
+  "createCV": {
+    "title": "Create a CV from scratch",
+    "subtitle": "Fill the form to build your professional CV",
+    "template": {
+      "title": "Choose a template",
+      "subtitle": "Select the CV design that best matches your professional profile"
+    },
+    "personalInfo": {
+      "title": "Personal Information",
+      "subtitle": "Your contact details and basic info",
+      "name": "Full name",
+      "namePlaceholder": "John Doe",
+      "jobTitle": "Job title",
+      "jobTitlePlaceholder": "Full Stack Developer",
+      "email": "Email",
+      "emailPlaceholder": "john.doe@example.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 555 123 4567",
+      "address": "Address",
+      "addressPlaceholder": "City, Country",
+      "website": "Website / LinkedIn",
+      "websitePlaceholder": "https://linkedin.com/in/johndoe"
+    },
+    "profile": {
+      "title": "Professional profile",
+      "subtitle": "Summary of your experience and skills",
+      "placeholder": "Describe your professional profile, key skills and career goals..."
+    },
+    "experience": {
+      "title": "Work Experience",
+      "subtitle": "Add your professional experiences",
+      "positionPlaceholder": "Job title",
+      "companyPlaceholder": "Company name",
+      "locationPlaceholder": "Location (city, country)",
+      "periodPlaceholder": "Period (e.g. 2020 - 2023)",
+      "descriptionPlaceholder": "Description of responsibilities and achievements...",
+      "add": "Add an experience"
+    },
+    "education": {
+      "title": "Education",
+      "subtitle": "Add your degrees and training",
+      "institutionPlaceholder": "Institution (University, School...)",
+      "degreePlaceholder": "Degree obtained",
+      "periodPlaceholder": "Period (e.g. 2016 - 2020)",
+      "add": "Add education"
+    },
+    "skills": {
+      "title": "Skills",
+      "subtitle": "List your technical and professional skills",
+      "placeholder": "E.g.: JavaScript, React, Node.js...",
+      "add": "Add"
+    },
+    "languages": {
+      "title": "Languages",
+      "subtitle": "Indicate the languages you speak",
+      "placeholder": "E.g.: English (Native), French (Fluent)...",
+      "add": "Add"
+    },
+    "projects": {
+      "title": "Projects",
+      "subtitle": "Add your personal or professional projects",
+      "namePlaceholder": "Project name",
+      "periodPlaceholder": "Period (optional)",
+      "descriptionPlaceholder": "Project description...",
+      "add": "Add a project"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "subtitle": "List your professional certifications",
+      "placeholder": "E.g.: AWS Certified Solutions Architect...",
+      "add": "Add"
+    },
+    "references": {
+      "title": "References",
+      "subtitle": "Add your professional references",
+      "namePlaceholder": "Full name",
+      "titlePlaceholder": "Title / Position",
+      "phonePlaceholder": "Phone",
+      "emailPlaceholder": "Email",
+      "phone": "Phone",
+      "email": "Email",
+      "add": "Add a reference"
+    },
+    "generate": "Generate CV",
+    "generating": "Generating CV...",
+    "loading": {
+      "title": "Generating your CV",
+      "subtitle": "Creating your professional CV..."
+    },
+    "success": {
+      "title": "CV created successfully!",
+      "message": "Your CV has been created and is ready to download",
+      "downloadPDF": "Download as PDF",
+      "viewHistory": "View in History",
+      "redirecting": "CV created successfully! Redirecting to history in 3 seconds..."
+    },
+    "errors": {
+      "nameRequired": "Name is required",
+      "generationError": "Error creating CV"
+    }
+  },
+  "history": {
+    "title": "CV History",
+    "subtitle": "{{count}} CV generated",
+    "subtitle_plural": "{{count}} CVs generated",
+    "generateNew": "Generate New CV",
+    "search": "Search in job descriptions...",
+    "sortNewest": "Newest",
+    "sortOldest": "Oldest",
+    "resultsFound": "{{count}} result found",
+    "resultsFound_plural": "{{count}} results found",
+    "cvGenerated": "CV Generated",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "daysAgo": "{{count}} days ago",
+    "weeksAgo": "{{count}} weeks ago",
+    "monthsAgo": "{{count}} months ago",
+    "jobDescription": "Job Description:",
+    "viewButton": "View",
+    "downloadButton": "PDF",
+    "newBadge": "New",
+    "generatedOn": "Generated on {{date}}",
+    "empty": {
+      "title": "No CVs Generated",
+      "description": "You haven't generated any CVs yet. Start now and create your first AI-optimized CV!",
+      "button": "Generate My First CV"
+    },
+    "noResults": {
+      "title": "No Results",
+      "description": "No CVs match your search \"{{query}}\"",
+      "button": "Clear Search"
+    },
+    "modal": {
+      "title": "Optimized CV",
+      "downloadPDF": "Download as PDF"
+    }
+  },
+  "branding": {
+    "tagline": "Create AI-optimized CVs",
+    "description": "Transform your CV in a few clicks and maximize your chances of getting hired",
+    "joinThousands": "Join thousands of users",
+    "createAccountFree": "Create your free account and start generating AI-optimized CVs",
+    "features": {
+      "ai": {
+        "title": "Artificial Intelligence",
+        "description": "Automatic optimization with GPT-3.5 for metric-rich CVs"
+      },
+      "templates": {
+        "title": "4 Professional Templates",
+        "description": "Modern designs adapted to all industries"
+      },
+      "fast": {
+        "title": "Fast and Easy",
+        "description": "Generation in ~30 seconds with automatic OCR extraction"
+      },
+      "unlimited": "Unlimited CV generation",
+      "ocr": "Automatic OCR extraction",
+      "historyAll": "History of all your CVs",
+      "pdfExport": "High-quality PDF export",
+      "aiOptimization": "Advanced AI optimization",
+      "free": {
+        "title": "100% Free",
+        "description": "No credit card required. Start creating professional CVs immediately."
+      }
+    }
+  },
+  "register": {
+    "joinThousands": "Join thousands of users",
+    "subtitle": "Create your free account and start generating AI-optimized CVs",
+    "joinFree": "Join Resumate for free",
+    "benefits": {
+      "unlimited": "Unlimited CV generation",
+      "templates": "4 professional templates",
+      "ocr": "Automatic OCR extraction",
+      "history": "History of all your CVs",
+      "pdf": "High-quality PDF export",
+      "ai": "Advanced AI optimization"
+    },
+    "free": {
+      "title": "100% Free",
+      "description": "No credit card required. Start creating professional CVs immediately."
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Resumate. All rights reserved.",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "support": "Support"
+  }
+}
