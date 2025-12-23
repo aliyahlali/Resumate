@@ -61,7 +61,7 @@ const Dashboard = () => {
                 {t('dashboard.generateNow')}
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
+            <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-50 shadow-lg">
               <Link to="/history">
                 <History className="mr-2 h-5 w-5" />
                 {t('dashboard.viewHistory')}

@@ -177,12 +177,12 @@ const Layout = ({ children }) => {
               <a href="#" className="hover:text-foreground transition-colors">
                 {t('footer.about')}
               </a>
-              <a href="#" className="hover:text-foreground transition-colors">
+              <Link to="/privacy-policy" className="hover:text-foreground transition-colors">
                 {t('footer.privacy')}
-              </a>
-              <a href="#" className="hover:text-foreground transition-colors">
+              </Link>
+              <Link to="/terms-of-service" className="hover:text-foreground transition-colors">
                 {t('footer.terms')}
-              </a>
+              </Link>
               <a href="#" className="hover:text-foreground transition-colors">
                 {t('footer.support')}
               </a>

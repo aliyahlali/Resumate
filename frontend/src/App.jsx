@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import WelcomePage from './pages/WelcomePage';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
@@ -8,7 +9,24 @@ import GenerateCV from './pages/GenerateCV';
 import CreateCV from './pages/CreateCV';
 import History from './pages/History';
 import AdminDashboard from './pages/AdminDashboard';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 import Layout from './components/Layout';
+
+// Home page route that redirects based on auth status
+const HomeRoute = () => {
+  const { isAuthenticated, loading } = useAuth();
+
+  if (loading) {
+    return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>Chargement...</div>;
+  }
+
+  return isAuthenticated ? (
+    <Navigate to="/dashboard" replace />
+  ) : (
+    <WelcomePage />
+  );
+};
 
 // Composant pour protéger les routes privées
 const PrivateRoute = ({ children }) => {
@@ -35,8 +53,11 @@ const PublicRoute = ({ children }) => {
 function AppRoutes() {
   return (
     <Routes>
+      <Route path="/" element={<HomeRoute />} />
       <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
       <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-of-service" element={<TermsOfService />} />
       
       <Route
         path="/dashboard"
@@ -88,7 +109,6 @@ function AppRoutes() {
           </PrivateRoute>
         }
       />
-      <Route path="/" element={<Navigate to="/dashboard" />} />
     </Routes>
   );
 }
