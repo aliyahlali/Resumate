@@ -2,14 +2,39 @@ const { parseCVText } = require('./cvParser');
 const { generateWithTemplate } = require('./cvTemplates');
 
 /**
+ * Limit text to a single paragraph (max 2 sentences)
+ */
+function limitSummaryToParagraph(text, maxChars = 300) {
+  if (!text) return '';
+  
+  // Split by sentences
+  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+  
+  let summary = '';
+  for (const sentence of sentences) {
+    if ((summary + sentence).length > maxChars) {
+      break;
+    }
+    summary += sentence;
+  }
+  
+  return summary.trim() || text.substring(0, maxChars);
+}
+
+/**
  * Generate a CV in HTML format from optimized text
  * @param {string} cvText - Optimized CV text
- * @param {string} templateId - ID of the template to use (optional)
+ * @param {string} templateId - ID of the template to use 
  * @returns {string} - CV HTML
  */
 exports.generateCVHTML = (cvText, templateId = 'modern-professional') => {
   // Parse text to extract structured data
   const cvData = parseCVText(cvText);
+  
+  // Limit the profile/summary to 1 paragraph
+  if (cvData && cvData.profile) {
+    cvData.profile = limitSummaryToParagraph(cvData.profile);
+  }
   
   // If parsing was successful, use the selected template
   if (cvData && cvData.name) {
@@ -29,6 +54,11 @@ exports.generateCVHTML = (cvText, templateId = 'modern-professional') => {
 exports.generateCVHTMLFromData = (cvData, templateId = 'modern-professional') => {
   if (!cvData || !cvData.name) {
     throw new Error('CV data must contain at least a name');
+  }
+  
+  // Limit the profile/summary to 1 paragraph
+  if (cvData.profile) {
+    cvData.profile = limitSummaryToParagraph(cvData.profile);
   }
   
   return generateCVWithTemplate(cvData, templateId);
@@ -69,7 +99,6 @@ function prepareModernProfessionalData(cvData) {
       ${cvData.contact.phone ? `<div class="contact-item"><span class="contact-icon">P</span> ${cvData.contact.phone}</div>` : ''}
       ${cvData.contact.email ? `<div class="contact-item"><span class="contact-icon">E</span> ${cvData.contact.email}</div>` : ''}
       ${cvData.contact.address ? `<div class="contact-item"><span class="contact-icon">A</span> ${cvData.contact.address}</div>` : ''}
-      ${cvData.contact.website ? `<div class="contact-item"><span class="contact-icon">W</span> ${cvData.contact.website}</div>` : ''}
     </div>
     
     ${cvData.skills.length > 0 ? `
@@ -106,13 +135,6 @@ function prepareModernProfessionalData(cvData) {
   `;
   
   const mainContent = `
-    ${cvData.profile ? `
-    <div class="section">
-      <h2>PROFESSIONAL PROFILE</h2>
-      <p style="text-align: justify; line-height: 1.7;">${cvData.profile}</p>
-    </div>
-    ` : ''}
-    
     ${cvData.experience.length > 0 ? `
     <div class="section">
       <h2>PROFESSIONAL EXPERIENCE</h2>
@@ -173,12 +195,6 @@ function prepareCleanMinimalData(cvData) {
       ${cvData.contact.email ? `<span>${cvData.contact.email}</span>` : ''}
       ${cvData.contact.address ? `<span>${cvData.contact.address}</span>` : ''}
     </div>
-    
-    ${cvData.profile ? `
-    <div class="summary">
-      ${cvData.profile}
-    </div>
-    ` : ''}
     
     ${cvData.experience.length > 0 ? `
     <div class="section">
@@ -265,7 +281,6 @@ function prepareProfessionalClassicData(cvData) {
     <div class="contact-info">
       ${cvData.contact.phone ? `<span>${cvData.contact.phone}</span>` : ''}
       ${cvData.contact.email ? `<span>${cvData.contact.email}</span>` : ''}
-      ${cvData.contact.website ? `<span>${cvData.contact.website}</span>` : ''}
     </div>
     
     ${cvData.profile ? `
@@ -349,7 +364,6 @@ function prepareCreativeModernData(cvData) {
           ${cvData.contact.phone ? `<div class="contact-item"><span class="contact-icon">P</span> ${cvData.contact.phone}</div>` : ''}
           ${cvData.contact.email ? `<div class="contact-item"><span class="contact-icon">E</span> ${cvData.contact.email}</div>` : ''}
           ${cvData.contact.address ? `<div class="contact-item"><span class="contact-icon">A</span> ${cvData.contact.address}</div>` : ''}
-          ${cvData.contact.website ? `<div class="contact-item"><span class="contact-icon">W</span> ${cvData.contact.website}</div>` : ''}
         </div>
         
         ${cvData.education.length > 0 ? `
@@ -385,13 +399,6 @@ function prepareCreativeModernData(cvData) {
       </div>
       
       <div class="right-column">
-        ${cvData.profile ? `
-        <div class="section">
-          <h2>PROFILE SUMMARY</h2>
-          <div class="profile-summary">${cvData.profile}</div>
-        </div>
-        ` : ''}
-        
         ${cvData.experience.length > 0 ? `
         <div class="section">
           <h2>WORK EXPERIENCE</h2>

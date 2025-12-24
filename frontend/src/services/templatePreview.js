@@ -210,6 +210,66 @@ const templates = {
       </div>
     </body>
     </html>
+  `,
+  
+  'legal-classic': (data) => `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; line-height: 1.6; color: #000; padding: 40px 60px; max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #000; }
+        h1 { font-size: 18px; font-weight: bold; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 8px; }
+        .job-title { font-size: 13px; margin-bottom: 12px; }
+        .contact { font-size: 10px; line-height: 1.8; color: #000; }
+        h2 { font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; text-align: center; margin: 25px 0 15px; }
+        .section { margin-bottom: 15px; }
+        h3 { font-size: 11px; font-weight: bold; font-style: italic; margin-bottom: 3px; }
+        .meta { font-size: 10px; color: #000; }
+        .item { margin-bottom: 8px; padding-left: 12px; position: relative; font-size: 10px; }
+        .item::before { content: "•"; position: absolute; left: 0; }
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 30px; margin-top: 10px; }
+        .skill-item { font-size: 10px; margin-bottom: 6px; display: flex; justify-content: space-between; }
+      </style>
+    </head>
+    <body>
+      <div class="header">
+        <h1>${data.fullName}</h1>
+        <div class="job-title">${data.jobTitle}</div>
+        <div class="contact">
+          <div>${data.email}</div>
+          <div>${data.phone}</div>
+          <div>${data.location}</div>
+        </div>
+      </div>
+      
+      <h2>Professional Summary</h2>
+      <div class="section" style="font-size: 10px; line-height: 1.7;">${data.summary.substring(0, 150)}...</div>
+      
+      <h2>Professional Experience</h2>
+      ${data.experience.map(exp => `
+        <div class="section">
+          <h3>${exp.company}</h3>
+          <div class="meta">${exp.position} | ${exp.startDate} - ${exp.endDate}</div>
+          <div style="font-size: 10px; margin-top: 5px;">${exp.description.substring(0, 90)}...</div>
+        </div>
+      `).join('')}
+      
+      <h2>Education</h2>
+      ${data.education.map(edu => `
+        <div class="section">
+          <h3>${edu.school}</h3>
+          <div class="meta">${edu.degree} in ${edu.field} | ${edu.year}</div>
+        </div>
+      `).join('')}
+      
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        ${data.skills.map(s => `<div class="skill-item"><span>${s}</span></div>`).join('')}
+      </div>
+    </body>
+    </html>
   `
 };
 

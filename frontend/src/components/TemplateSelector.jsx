@@ -10,25 +10,25 @@ const defaultTemplates = [
     id: 'modern-professional',
     name: 'Modern Professional',
     description: 'Modern design with sidebar and vertical timeline',
-    features: ['Sidebar', 'Timeline', 'Two-column layout']
+    features: ['Tech', 'Engineering', 'Marketing', 'Project Management']
   },
   {
     id: 'clean-minimal',
     name: 'Clean Minimal',
     description: 'Clean and centered academic-style design',
-    features: ['Centered layout', 'Serif font', 'Clean design']
+    features: ['Academia', 'Research', 'Education', 'Publishing', 'Law']
   },
   {
     id: 'professional-classic',
     name: 'Professional Classic',
     description: 'Classic and professional design',
-    features: ['Classic layout', 'Two-column sections', 'Professional']
+    features: ['Finance', 'Banking', 'Consulting', 'Corporate', 'HR']
   },
   {
     id: 'creative-modern',
     name: 'Creative Modern',
     description: 'Creative design with initials watermark',
-    features: ['Watermark', 'Two-column layout', 'Modern design']
+    features: ['Design', 'Marketing', 'Media', 'Advertising']
   }
 ];
 

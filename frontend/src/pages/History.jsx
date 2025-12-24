@@ -85,16 +85,19 @@ const History = () => {
     }
   };
 
-  const handleDownloadPDF = (cvHTML) => {
+  const handleDownloadPDF = (cvHTML, fileName = 'resume.pdf') => {
     if (!cvHTML) return;
 
+    // Create a new window with the CV HTML
     const printWindow = window.open('', '_blank');
     printWindow.document.write(cvHTML);
     printWindow.document.close();
 
+    // Trigger print dialog (user can save as PDF)
     printWindow.onload = () => {
       setTimeout(() => {
         printWindow.print();
+        // Don't close the window immediately - let user complete the print action
       }, 250);
     };
   };

@@ -23,27 +23,30 @@ const modernProfessionalTemplate = (cvData) => {
         }
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            line-height: 1.4;
             color: #333;
             background: #fff;
         }
         .cv-container {
             display: flex;
             max-width: 210mm;
-            min-height: 297mm;
+            height: 297mm;
             margin: 0 auto;
             background: #fff;
+            overflow: hidden;
         }
         .sidebar {
             width: 35%;
             background: #f8f9fa;
-            padding: 40px 30px;
+            padding: 30px 20px;
             border-right: 3px solid #e0e0e0;
+            overflow: hidden;
         }
         .main-content {
             width: 65%;
-            padding: 40px;
+            padding: 30px 25px;
             position: relative;
+            overflow: hidden;
         }
         .timeline {
             position: absolute;
@@ -63,30 +66,31 @@ const modernProfessionalTemplate = (cvData) => {
             border: 3px solid #fff;
         }
         h1 {
-            font-size: 36px;
+            font-size: 28px;
             font-weight: bold;
             text-transform: uppercase;
-            margin-bottom: 8px;
-            letter-spacing: 3px;
-            line-height: 1.2;
+            margin-bottom: 4px;
+            letter-spacing: 2px;
+            line-height: 1.1;
         }
         .job-title {
-            font-size: 16px;
+            font-size: 13px;
             color: #666;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 35px;
-            padding-bottom: 18px;
-            border-bottom: 3px solid #333;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #333;
         }
         h2 {
-            font-size: 16px;
+            font-size: 13px;
             font-weight: bold;
             text-transform: uppercase;
-            margin-bottom: 18px;
-            letter-spacing: 1.5px;
-            border-bottom: 3px solid #333;
-            padding-bottom: 10px;
+            margin-bottom: 10px;
+            margin-top: 12px;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
         }
         h3 {
             font-size: 18px;
@@ -95,45 +99,45 @@ const modernProfessionalTemplate = (cvData) => {
             line-height: 1.3;
         }
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 12px;
         }
         .main-content .section {
-            margin-bottom: 28px;
+            margin-bottom: 12px;
         }
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 14px;
-            font-size: 14px;
-            line-height: 1.5;
+            margin-bottom: 6px;
+            font-size: 12px;
+            line-height: 1.3;
         }
         .contact-icon {
-            width: 22px;
-            margin-right: 12px;
+            width: 18px;
+            margin-right: 8px;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 14px;
         }
         .skills-list {
             list-style: none;
             padding: 0;
         }
         .skills-list li {
-            margin-bottom: 10px;
-            padding-left: 18px;
+            margin-bottom: 5px;
+            padding-left: 14px;
             position: relative;
-            font-size: 14px;
-            line-height: 1.5;
+            font-size: 12px;
+            line-height: 1.3;
         }
         .skills-list li:before {
             content: "•";
             position: absolute;
             left: 0;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 14px;
         }
         .experience-item {
-            margin-bottom: 32px;
-            padding-left: 28px;
+            margin-bottom: 12px;
+            padding-left: 20px;
             position: relative;
         }
         .company-name {
@@ -219,42 +223,44 @@ const cleanMinimalTemplate = (cvData) => {
         }
         body {
             font-family: 'Georgia', serif;
-            line-height: 1.6;
+            line-height: 1.4;
             color: #333;
             background: #fff;
-            padding: 40px;
+            padding: 20px;
         }
         .cv-container {
             max-width: 800px;
             margin: 0 auto;
             background: #fff;
+            height: 257mm;
+            overflow: hidden;
         }
         h1 {
-            font-size: 42px;
+            font-size: 32px;
             text-align: center;
-            margin-bottom: 8px;
+            margin-bottom: 3px;
             font-weight: normal;
-            letter-spacing: 4px;
-            line-height: 1.2;
+            letter-spacing: 2px;
+            line-height: 1.1;
         }
         .job-title {
             text-align: center;
-            font-size: 16px;
+            font-size: 12px;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 1px;
             color: #666;
-            margin-bottom: 35px;
-            padding-bottom: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
             border-bottom: 2px solid #333;
         }
         h2 {
-            font-size: 18px;
+            font-size: 14px;
             font-weight: bold;
             text-transform: uppercase;
             color: #2c7a7b;
-            margin-top: 35px;
-            margin-bottom: 18px;
-            letter-spacing: 1.5px;
+            margin-top: 10px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
         }
         h3 {
             font-size: 17px;
@@ -381,66 +387,68 @@ const professionalClassicTemplate = (cvData) => {
         }
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            line-height: 1.4;
             color: #333;
             background: #fff;
-            padding: 40px;
+            padding: 20px;
         }
         .cv-container {
             max-width: 800px;
             margin: 0 auto;
             background: #fff;
+            height: 257mm;
+            overflow: hidden;
         }
         h1 {
-            font-size: 32px;
+            font-size: 26px;
             text-align: center;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 8px;
+            letter-spacing: 4px;
         }
         .job-title {
             text-align: center;
-            font-size: 16px;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
+            font-size: 13px;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
         }
         .contact-info {
             text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
             border-bottom: 2px solid #333;
-            font-size: 12px;
+            font-size: 11px;
         }
         .contact-info span {
-            margin: 0 10px;
+            margin: 0 8px;
         }
         h2 {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: bold;
             text-transform: uppercase;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
+            margin-top: 10px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
             border-bottom: 2px solid #333;
-            padding-bottom: 8px;
+            padding-bottom: 5px;
         }
         h3 {
-            font-size: 15px;
+            font-size: 13px;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 10px;
         }
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 20px;
         }
         .profile {
-            font-size: 13px;
-            line-height: 1.7;
+            font-size: 12px;
+            line-height: 1.5;
             text-align: justify;
             margin-bottom: 25px;
         }
@@ -529,22 +537,24 @@ const creativeModernTemplate = (cvData) => {
         }
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            line-height: 1.4;
             color: #333;
             background: #fff;
-            padding: 40px;
+            padding: 20px;
         }
         .cv-container {
             max-width: 800px;
             margin: 0 auto;
             background: #fff;
             position: relative;
+            height: 257mm;
+            overflow: hidden;
         }
         .watermark {
             position: absolute;
-            top: 50px;
-            right: 50px;
-            font-size: 150px;
+            top: 30px;
+            right: 30px;
+            font-size: 100px;
             color: rgba(230, 230, 230, 0.3);
             font-weight: bold;
             font-style: italic;
@@ -556,39 +566,40 @@ const creativeModernTemplate = (cvData) => {
             z-index: 1;
         }
         h1 {
-            font-size: 36px;
+            font-size: 28px;
             text-align: center;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
             font-weight: 300;
             text-transform: uppercase;
-            letter-spacing: 6px;
+            letter-spacing: 3px;
         }
         .job-title {
             text-align: center;
-            font-size: 14px;
+            font-size: 12px;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 1px;
             color: #666;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
             border-bottom: 1px solid #ddd;
         }
         .layout {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 40px;
-            margin-top: 30px;
+            gap: 20px;
+            margin-top: 12px;
         }
         h2 {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: bold;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 8px;
+            margin-top: 8px;
             letter-spacing: 1px;
             color: #555;
         }
         h3 {
-            font-size: 15px;
+            font-size: 13px;
             font-weight: bold;
             margin-bottom: 5px;
         }
@@ -702,7 +713,7 @@ const templates = {
     description: 'Modern design with sidebar and vertical timeline',
     thumbnail: '/templates/modern-professional.png',
     generator: modernProfessionalTemplate,
-    features: ['Sidebar', 'Timeline', 'Two-column layout']
+    features: ['Tech', 'Engineering', 'Marketing', 'Project Management']
   },
   'clean-minimal': {
     id: 'clean-minimal',
@@ -710,7 +721,7 @@ const templates = {
     description: 'Clean and centered academic-style design',
     thumbnail: '/templates/clean-minimal.png',
     generator: cleanMinimalTemplate,
-    features: ['Centered layout', 'Serif font', 'Clean design']
+    features: ['Academia', 'Research', 'Education', 'Publishing', 'Law']
   },
   'professional-classic': {
     id: 'professional-classic',
@@ -718,7 +729,7 @@ const templates = {
     description: 'Classic and professional design',
     thumbnail: '/templates/professional-classic.png',
     generator: professionalClassicTemplate,
-    features: ['Classic layout', 'Two-column sections', 'Professional']
+    features: ['Finance', 'Banking', 'Consulting', 'Corporate', 'HR']
   },
   'creative-modern': {
     id: 'creative-modern',
@@ -726,7 +737,7 @@ const templates = {
     description: 'Creative design with initials watermark',
     thumbnail: '/templates/creative-modern.png',
     generator: creativeModernTemplate,
-    features: ['Watermark', 'Two-column layout', 'Modern design']
+    features: ['Design', 'Marketing', 'Media', 'Advertising']
   }
 };
 
