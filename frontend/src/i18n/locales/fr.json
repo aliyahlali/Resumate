@@ -104,7 +104,7 @@
     "features": {
       "ai": {
         "title": "IA Avancée",
-        "description": "Utilise GPT-3.5 pour générer des CV riches avec métriques et contextes détaillés"
+        "description": "Utilise AI pour générer des CV riches avec métriques et contextes détaillés"
       },
       "templates": {
         "title": "4 Templates Pro",
@@ -119,18 +119,23 @@
   "generate": {
     "title": "Générer un CV Optimisé",
     "subtitle": "Suivez les étapes pour créer votre CV optimisé par IA",
+    "resumeSource": "Source du CV",
+    "jobDescription": "Description du poste",
+    "checkMatchScore": "Vérifier le score de correspondance",
+    "fixAndGenerate": "Corriger et générer le CV",
+    "analyzing": "Analyse en cours...",
+    "resumeMatchAnalysis": "Analyse de correspondance du CV",
+    "matchScore": "Score de correspondance",
+    "matchedKeywords": "Mots-clés correspondants",
+    "missingKeywords": "Mots-clés manquants",
     "steps": {
       "template": {
         "title": "Template",
         "description": "Choisissez un design"
       },
       "cv": {
-        "title": "CV",
-        "description": "Votre CV actuel"
-      },
-      "job": {
-        "title": "Poste",
-        "description": "Description du poste"
+        "title": "CV et Poste",
+        "description": "CV et description du poste"
       },
       "generation": {
         "title": "Génération",
@@ -141,24 +146,14 @@
       "title": "Étape 1 : Choisissez votre template",
       "subtitle": "Sélectionnez le design de CV qui correspond le mieux à votre profil professionnel"
     },
-    "step2a": {
-      "title": "Étape 2a : Uploader votre CV (Optionnel)",
-      "subtitle": "Formats acceptés: PDF, Word (.doc, .docx), Images (PNG, JPG, JPEG)",
+    "step2": {
+      "title": "Étape 2 : Uploader votre CV et ajouter la description du poste",
+      "subtitle": "Uploadez votre CV et collez la description du poste pour analyser la correspondance",
       "extracting": "Extraction du texte en cours...",
-      "extracted": "Texte extrait avec succès ! ({{count}} caractères)"
-    },
-    "step2b": {
-      "title": "Étape 2b : Texte de votre CV",
-      "required": "*",
-      "subtitle": "Le texte sera automatiquement rempli si vous avez uploadé un fichier, sinon collez-le ici",
-      "placeholder": "Collez ici le texte de votre CV actuel ou il sera rempli automatiquement après l'upload...",
-      "charCount": "{{count}} caractères (minimum 50)",
-      "ready": "Prêt !"
+      "extracted": "Texte extrait avec succès ! ({{count}} caractères)",
+      "charCount": "{{count}} caractères (minimum 50)"
     },
     "step3": {
-      "title": "Étape 3 : Description du poste",
-      "required": "*",
-      "subtitle": "Collez la description complète du poste pour lequel vous postulez. Plus elle est détaillée, meilleur sera le résultat !",
       "placeholder": "Collez ici la description complète du poste...",
       "charCount": "{{count}} caractères (minimum 20, recommandé 100+)"
     },
@@ -183,6 +178,7 @@
     "errors": {
       "cvTooShort": "Le texte du CV doit contenir au moins 50 caractères",
       "jobTooShort": "La description du poste doit contenir au moins 20 caractères",
+      "analysisError": "Erreur lors de l'analyse de la correspondance",
       "extractionError": "Erreur lors de l'extraction du texte du fichier",
       "generationError": "Erreur lors de la génération du CV"
     }
@@ -231,7 +227,7 @@
     "features": {
       "ai": {
         "title": "Intelligence Artificielle",
-        "description": "Optimisation automatique avec GPT-3.5 pour des CV riches en métriques"
+        "description": "Optimisation automatique avec AI pour des CV riches en métriques"
       },
       "templates": {
         "title": "4 Templates Professionnels",
@@ -419,7 +415,7 @@
     }
   },
   "footer": {
-    "copyright": "© 2024 Resumate. Tous droits réservés.",
+    "copyright": "© 2026 Resumate. Tous droits réservés.",
     "about": "À propos",
     "privacy": "Confidentialité",
     "terms": "Conditions",

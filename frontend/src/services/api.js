@@ -67,6 +67,14 @@ export const cvService = {
     return response.data;
   },
 
+  analyzeMatch: async (cvText, jobDescription) => {
+    const response = await api.post('/cv/analyze-match', {
+      cvText,
+      jobDescription,
+    });
+    return response.data;
+  },
+
   createFromScratch: async (cvData, templateId = 'modern-professional', jobDescription = '') => {
     const response = await api.post('/cv/create-from-scratch', {
       cvData,

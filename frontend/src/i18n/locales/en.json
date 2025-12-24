@@ -104,7 +104,7 @@
     "features": {
       "ai": {
         "title": "Advanced AI",
-        "description": "Uses GPT-3.5 to generate rich CVs with metrics and detailed contexts"
+        "description": "Uses AI to generate rich CVs with metrics and detailed contexts"
       },
       "templates": {
         "title": "4 Pro Templates",
@@ -119,18 +119,23 @@
   "generate": {
     "title": "Generate Optimized CV",
     "subtitle": "Follow the steps to create your AI-optimized CV",
+    "resumeSource": "Resume Source",
+    "jobDescription": "Job Description",
+    "checkMatchScore": "Check Match Score",
+    "fixAndGenerate": "Fix It & Generate Resume",
+    "analyzing": "Analyzing...",
+    "resumeMatchAnalysis": "Resume Match Analysis",
+    "matchScore": "Match Score",
+    "matchedKeywords": "Matched Keywords",
+    "missingKeywords": "Missing Keywords",
     "steps": {
       "template": {
         "title": "Template",
         "description": "Choose a design"
       },
       "cv": {
-        "title": "CV",
-        "description": "Your current CV"
-      },
-      "job": {
-        "title": "Job",
-        "description": "Job description"
+        "title": "CV & Job",
+        "description": "Resume and job description"
       },
       "generation": {
         "title": "Generation",
@@ -141,24 +146,14 @@
       "title": "Step 1: Choose Your Template",
       "subtitle": "Select the CV design that best matches your professional profile"
     },
-    "step2a": {
-      "title": "Step 2a: Upload Your CV (Optional)",
-      "subtitle": "Accepted formats: PDF, Word (.doc, .docx), Images (PNG, JPG, JPEG)",
+    "step2": {
+      "title": "Step 2: Upload Your Resume & Add Job Description",
+      "subtitle": "Upload your resume and paste the job description to analyze the match",
       "extracting": "Extracting text...",
-      "extracted": "Text extracted successfully! ({{count}} characters)"
-    },
-    "step2b": {
-      "title": "Step 2b: Your CV Text",
-      "required": "*",
-      "subtitle": "The text will be automatically filled if you uploaded a file, otherwise paste it here",
-      "placeholder": "Paste your current CV text here or it will be filled automatically after upload...",
-      "charCount": "{{count}} characters (minimum 50)",
-      "ready": "Ready!"
+      "extracted": "Text extracted successfully! ({{count}} characters)",
+      "charCount": "{{count}} characters (minimum 50)"
     },
     "step3": {
-      "title": "Step 3: Job Description",
-      "required": "*",
-      "subtitle": "Paste the complete job description you're applying for. The more detailed, the better the result!",
       "placeholder": "Paste the complete job description here...",
       "charCount": "{{count}} characters (minimum 20, recommended 100+)"
     },
@@ -183,9 +178,27 @@
     "errors": {
       "cvTooShort": "CV text must contain at least 50 characters",
       "jobTooShort": "Job description must contain at least 20 characters",
+      "analysisError": "Error analyzing CV and job match",
       "extractionError": "Error extracting text from file",
       "generationError": "Error generating CV"
     }
+  },
+  "preview": {
+    "title": "Your Tailored Resume",
+    "subtitle": "Optimized for maximum impact",
+    "chooseTemplate": "Choose Template",
+    "templateDesc": "Select a design that matches your style",
+    "print": "Print",
+    "download": "Download PDF",
+    "atsScore": "ATS Score Improvement",
+    "original": "Original",
+    "newMatch": "New Match",
+    "improvement": "Improvement",
+    "matchedKeywords": "Matched Keywords",
+    "stillMissing": "Still Missing",
+    "more": "more",
+    "viewHistory": "View All Resumes",
+    "createNew": "Create Another"
   },
   "createCV": {
     "title": "Create a CV from scratch",
@@ -371,7 +384,7 @@
     }
   },
   "footer": {
-    "copyright": "© 2024 Resumate. All rights reserved.",
+    "copyright": "© 2026 Resumate. All rights reserved.",
     "about": "About",
     "privacy": "Privacy",
     "terms": "Terms",

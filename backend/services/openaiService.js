@@ -107,7 +107,7 @@ ${cvText}
 TARGET JOB DESCRIPTION:
 ${jobDescription}
 
-TASK: Create a COMPLETE, PROFESSIONAL and HIGHLY DETAILED CV optimized for this position.
+TASK: Create a COMPLETE, PROFESSIONAL CV optimized for this position. The CV MUST FIT ON A SINGLE PAGE. Only include achievements and information from the ORIGINAL CV - do NOT invent or add languages, projects, or experiences that were not in the original CV, even if they appear in the job description.
 
 ============================================================
 EXACT FORMAT TO FOLLOW (STRICT STRUCTURE):
@@ -120,7 +120,7 @@ CONTACT
 [Phone] | [Email] | [Address] | [LinkedIn/Portfolio]
 
 PROFESSIONAL PROFILE
-[A 5–7 line paragraph describing: years of experience, main areas of expertise, key skills, major achievements with PRECISE NUMBERS (%, $, volume), value for the employer, and career goals aligned with the role.]
+[A 3–4 line paragraph describing: years of experience, main areas of expertise, key skills, major achievements with PRECISE NUMBERS (%, $, volume), value for the employer, and career goals aligned with the role.]
 
 PROFESSIONAL EXPERIENCE
 
@@ -130,51 +130,39 @@ PROFESSIONAL EXPERIENCE
 • [Achievement 2 with strong action verb + context + quantified result: measurable impact, improved metric]
 • [Achievement 3 with strong action verb + context + quantified result: concrete data, precise metrics]
 • [Achievement 4 with strong action verb + context + quantified result: tangible results]
-• [Achievement 5 with strong action verb + context + quantified result: measurable accomplishment]
-• [Achievement 6 with strong action verb + context + quantified result: demonstrable impact]
 
-[Repeat for ALL roles in the original CV – minimum 3 positions with 6–8 bullet points EACH]
+[Repeat for ALL roles in the original CV – 3–4 bullet points MAXIMUM per position]
 
-KEY PROJECTS
+KEY PROJECTS (optional - include only if space allows and they are from the original CV)
 [Project Name 1]
-[Detailed description of project, context, and objectives] | [Dates]
-• Technologies: [Complete list of technologies used]
-• Results: [Results with NUMBERS: performance, adoption, savings, etc.]
-• Impact: [Measurable impact on the organization or users]
-
-[Repeat for 2–3 major projects if applicable]
+[Brief description] | [Dates]
+• Technologies: [Technologies used in original CV]
+• Results: [Results with NUMBERS from the original CV]
 
 EDUCATION
 
 [Full Degree with specialization]
 [Institution Name] | [City, Country]
 [Start Year] – [End Year]
-• Specialization: [Specific field]
-• Honors: [Honors if applicable]
-• Academic Projects: [Projects relevant to the role]
-
-[Repeat for all degrees]
+• Specialization: [Specific field if applicable]
 
 TECHNICAL SKILLS
 
-• Programming Languages: [COMPLETE and DETAILED list of all languages]
-• Frameworks & Libraries: [COMPLETE list: frameworks, libraries, development tools]
-• Databases: [COMPLETE list: SQL, NoSQL, management tools]
-• Cloud & DevOps: [Cloud platforms, CI/CD tools, containerization, orchestration]
-• Tools & Technologies: [IDE, version control, collaboration, design tools, etc.]
-• Methodologies: [Agile, Scrum, Kanban, TDD, etc.]
-• Soft Skills: [Communication, leadership, problem solving, etc.]
+• Programming Languages: [Languages from original CV]
+• Frameworks & Libraries: [Frameworks from original CV]
+• Databases: [Databases from original CV]
+• Cloud & DevOps: [Cloud/DevOps tools from original CV]
+• Tools & Technologies: [Tools from original CV]
+• Soft Skills: [Soft skills from original CV]
 
 LANGUAGES
 
-• [Language 1]: [Precise level – Native/Bilingual/Fluent/Intermediate/Basic] – [Certification if applicable]
-• [Language 2]: [Precise level] – [Certification if applicable]
-• [Language 3]: [Precise level] – [Certification if applicable]
+• [Language 1]: [Precise level from original CV]
+• [Language 2]: [Precise level from original CV]
 
-CERTIFICATIONS
+CERTIFICATIONS (optional - if applicable)
 
-• [Certification 1] – [Issuing organization], [Month Year]
-• [Certification 2] – [Issuing organization], [Month Year]
+• [Certification 1] – [Issuing organization], [Year]
 
 ============================================================
 ABSOLUTE RULES (MUST FOLLOW):
@@ -183,14 +171,14 @@ ABSOLUTE RULES (MUST FOLLOW):
 REQUIRED:
 1. Start DIRECTLY with the NAME (NO text before it).
 2. Follow EXACTLY the format above (sections in this order).
-3. MINIMUM 6–8 bullet points per professional experience.
-4. EVERY bullet MUST contain a NUMBER or METRIC (%, $, count, time).
-5. Use strong action verbs in past tense: Developed, Designed, Optimized, Increased, Reduced, Managed, Led, Created, Implemented, Improved.
-6. Integrate KEYWORDS from the job description throughout the CV.
-7. Expand EACH experience with CONCRETE and SPECIFIC details.
-8. Add rich CONTEXT: team size, budget, technologies, challenges.
-9. Quantify EVERYTHING: volumes, percentages, time, savings, growth.
-10. Create a professional profile of at least 5–7 lines (not 2–3 lines).
+3. MAXIMUM 4 bullet points per professional experience (be concise).
+4. Professional Profile: 3–4 lines ONLY (be concise for single page fit).
+5. EVERY bullet MUST contain a NUMBER or METRIC (%, $, count, time).
+6. Use strong action verbs in past tense: Developed, Designed, Optimized, Increased, Reduced, Managed, Led, Created, Implemented, Improved.
+7. Integrate KEYWORDS from the job description that match the ORIGINAL CV achievements.
+8. Add CONTEXT: team size, budget, technologies, challenges from the original CV.
+9. Keep formatting compact to ensure the CV fits on ONE PAGE ONLY.
+10. Optimize for ATS (Applicant Tracking Systems) - clean formatting, no special characters.
 
 STRICTLY FORBIDDEN:
 1. No explanatory comments ("This optimized CV...", "Here is...", "I created...").
@@ -198,7 +186,11 @@ STRICTLY FORBIDDEN:
 3. No empty sections.
 4. No generic bullet points without metrics ("Worked on projects").
 5. No text before the name.
-6. No unexplained abbreviations.
+6. Do NOT add languages, skills, technologies, or projects NOT in the original CV.
+7. Do NOT invent achievements or experiences.
+8. Do NOT include information that is false or not verifiable from the original CV.
+9. Do NOT exceed 4 bullet points per experience.
+10. Do NOT make the CV longer than one page - keep sections brief and impactful.
 
 NOW GENERATE THE COMPLETE CV STRICTLY FOLLOWING THIS FORMAT:`;
 
@@ -220,7 +212,7 @@ NOW GENERATE THE COMPLETE CV STRICTLY FOLLOWING THIS FORMAT:`;
         {
           role: 'system',
           content:
-            'You are a senior expert in recruitment and professional CV writing with 15 years of experience. You MUST create ULTRA-COMPLETE and VERY DETAILED CVs with ALL sections in the exact order: Name, Title, Contact, Professional Profile (minimum 5–7 lines), Professional Experience (6–8 detailed bullet points per role with rich context and precise metrics), Key Projects, Education, Technical Skills (very detailed), Languages, Certifications. EVERY experience bullet MUST include: strong action verb + detailed context + quantified result with PRECISE NUMBERS (%, $, time, volumes, growth). You return ONLY the formatted CV, with NO comments, notes, or explanations. You start DIRECTLY with the name in uppercase, NOTHING before it.',
+            'You are a senior expert in recruitment and professional CV writing. You MUST create CONCISE, ONE-PAGE CVs optimized for the role. CRITICAL CONSTRAINTS: (1) The CV MUST fit on ONE page only - keep all sections compact. (2) MAXIMUM 4 bullet points per professional experience - be ruthless about conciseness. (3) ONLY include information that exists in the original CV - NEVER add skills, languages, projects, or experiences from the job description that are not in the original CV. Do NOT fabricate or invent anything. You return ONLY the formatted CV with NO comments, notes, or explanations. Start DIRECTLY with the name in uppercase.',
         },
         {
           role: 'user',

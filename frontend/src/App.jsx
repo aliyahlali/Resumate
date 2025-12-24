@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import GenerateCV from './pages/GenerateCV';
+import ResumePreview from './pages/ResumePreview';
 import CreateCV from './pages/CreateCV';
 import History from './pages/History';
 import AdminDashboard from './pages/AdminDashboard';
@@ -75,6 +76,16 @@ function AppRoutes() {
           <PrivateRoute>
             <Layout>
               <GenerateCV />
+            </Layout>
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/preview"
+        element={
+          <PrivateRoute>
+            <Layout>
+              <ResumePreview />
             </Layout>
           </PrivateRoute>
         }

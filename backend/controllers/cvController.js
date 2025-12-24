@@ -1,5 +1,5 @@
 const CVHistory = require('../models/CVHistory');
-const { optimizeCV } = require('../services/openaiService');
+const { optimizeCV, analyzeKeywordMatch } = require('../services/openaiService');
 const { generateCVHTML } = require('../services/htmlGeneratorService');
 
 // @desc    Generate an optimized CV
@@ -292,4 +292,71 @@ function generateCVTextFromData(cvData) {
   
   return text;
 }
+
+// @desc    Analyze match between CV and job description
+// @route   POST /api/cv/analyze-match
+// @access  Private
+exports.analyzeMatch = async (req, res) => {
+  console.log(`POST /api/cv/analyze-match - Analyzing match (User ID: ${req.user.id})`);
+  try {
+    const { cvText, jobDescription } = req.body;
+
+    // Validate input
+    if (!cvText || !jobDescription) {
+      return res.status(400).json({
+        success: false,
+        message: 'Please provide both CV text and job description',
+      });
+    }
+
+    if (cvText.trim().length < 50) {
+      return res.status(400).json({
+        success: false,
+        message: 'CV text must contain at least 50 characters',
+      });
+    }
+
+    if (jobDescription.trim().length < 20) {
+      return res.status(400).json({
+        success: false,
+        message: 'Job description must contain at least 20 characters',
+      });
+    }
+
+    // Analyze match using OpenAI
+    console.log('  Analyzing keyword match...');
+    const startTime = Date.now();
+    try {
+      const matchAnalysis = await analyzeKeywordMatch(cvText, jobDescription);
+      const duration = Date.now() - startTime;
+      console.log(`  Match analysis completed (${duration}ms)`);
+      console.log(`  Match Score: ${matchAnalysis.score}%`);
+
+      res.status(200).json({
+        success: true,
+        data: {
+          matchScore: matchAnalysis.score,
+          matchedKeywords: matchAnalysis.matchedKeywords,
+          missingKeywords: matchAnalysis.missingKeywords,
+          summary: matchAnalysis.summary,
+        },
+      });
+    } catch (error) {
+      const duration = Date.now() - startTime;
+      console.log(`  Error during match analysis (${duration}ms): ${error.message}`);
+      return res.status(500).json({
+        success: false,
+        message: 'Error during match analysis',
+        error: error.message,
+      });
+    }
+  } catch (error) {
+    console.error('Error analyzing match:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Server error while analyzing match',
+      error: error.message,
+    });
+  }
+};
 

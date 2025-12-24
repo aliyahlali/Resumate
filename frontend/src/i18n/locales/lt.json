@@ -102,7 +102,7 @@
     "features": {
       "ai": {
         "title": "Pažangi AI",
-        "description": "Naudoja GPT-3.5 generuoti turtingus CV su metrikomis ir detaliais kontekstais"
+        "description": "Naudoja AI generuoti turtingus CV su metrikomis ir detaliais kontekstais"
       },
       "templates": {
         "title": "4 profesionalūs šablonai",
@@ -139,19 +139,14 @@
       "title": "1 žingsnis: Pasirinkite šabloną",
       "subtitle": "Pasirinkite CV dizainą, kuris geriausiai atitinka jūsų profesinį profilį"
     },
-    "step2a": {
-      "title": "2a žingsnis: Įkelkite savo CV (neprivaloma)",
+    "step2": {
+      "title": "2 žingsnis: Įkelkite savo CV",
+      "required": "*",
       "subtitle": "Priimami formatai: PDF, Word (.doc, .docx), vaizdai (PNG, JPG, JPEG)",
       "extracting": "Išskiriamas tekstas...",
-      "extracted": "Tekstas sėkmingai išskirtas! ({{count}} simbolių)"
-    },
-    "step2b": {
-      "title": "2b žingsnis: Jūsų CV tekstas",
-      "required": "*",
-      "subtitle": "Tekstas bus automatiškai užpildytas, jei įkėlėte failą, kitu atveju įklijuokite jį čia",
-      "placeholder": "Įklijuokite dabartinio CV tekstą čia arba jis bus užpildytas automatiškai po įkėlimo...",
-      "charCount": "{{count}} simbolių (mažiausiai 50)",
-      "ready": "Paruošta!"
+      "extracted": "Tekstas sėkmingai išskirtas! ({{count}} simbolių)",
+      "preview": "CV peržvalga",
+      "charCount": "{{count}} simbolių (mažiausiai 50)"
     },
     "step3": {
       "title": "3 žingsnis: Darbo aprašymas",
@@ -229,7 +224,7 @@
     "features": {
       "ai": {
         "title": "Dirbtinis intelektas",
-        "description": "Automatinis optimizavimas su GPT-3.5 metrikų turtingiems CV"
+        "description": "Automatinis optimizavimas su AI metrikų turtingiems CV"
       },
       "templates": {
         "title": "4 profesionalūs šablonai",
@@ -268,7 +263,7 @@
     }
   },
   "footer": {
-    "copyright": "© 2024 Resumate. Visos teisės saugomos.",
+    "copyright": "© 2026 Resumate. Visos teisės saugomos.",
     "about": "Apie",
     "privacy": "Privatumas",
     "terms": "Sąlygos",
