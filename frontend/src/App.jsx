@@ -9,6 +9,8 @@ import GenerateCV from './pages/GenerateCV';
 import ResumePreview from './pages/ResumePreview';
 import CreateCV from './pages/CreateCV';
 import History from './pages/History';
+import Pricing from './pages/Pricing';
+import Features from './pages/Features';
 import AdminDashboard from './pages/AdminDashboard';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
@@ -57,19 +59,10 @@ function AppRoutes() {
       <Route path="/" element={<HomeRoute />} />
       <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
       <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
+      <Route path="/features" element={<Features />} />
+      <Route path="/pricing" element={<Pricing />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-of-service" element={<TermsOfService />} />
-      
-      <Route
-        path="/dashboard"
-        element={
-          <PrivateRoute>
-            <Layout>
-              <Dashboard />
-            </Layout>
-          </PrivateRoute>
-        }
-      />
       <Route
         path="/generate"
         element={
@@ -109,6 +102,10 @@ function AppRoutes() {
             </Layout>
           </PrivateRoute>
         }
+      />
+      <Route
+        path="/pricing"
+        element={<Pricing />}
       />
       <Route
         path="/admin"

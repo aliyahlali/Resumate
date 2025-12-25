@@ -59,9 +59,9 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Product</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
+                <Link to="/features" className="hover:text-blue-400 transition-colors">
                   Features
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-blue-400 transition-colors">
@@ -69,9 +69,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
+                <Link to="/pricing" className="hover:text-blue-400 transition-colors">
                   Pricing
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

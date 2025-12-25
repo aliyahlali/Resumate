@@ -383,6 +383,145 @@
       "description": "No credit card required. Start creating professional CVs immediately."
     }
   },
+  "pricing": {
+    "title": "Fuel your career with",
+    "titleHighlight": "Credits",
+    "subtitle": "Each credit allows you to generate one perfectly tailored resume for a specific job description.",
+    "balance": "YOUR BALANCE",
+    "creditsLeft": "Credits Left",
+    "mostPopular": "Most Popular",
+    "creditsIncluded": "Credits Included",
+    "getStarter": "Get Starter",
+    "getBest": "Get Best Value",
+    "getPower": "Get Power User",
+    "tryFirst": "Want to try it out first?",
+    "newUserMessage": "Every new user starts with 3 free credits. No credit card required to experience the magic of Resumate.",
+    "freeCredits": "3 FREE CREDITS APPLIED",
+    "faqText": "Have questions?",
+    "contactSupport": "Contact our support team",
+    "starter": {
+      "name": "Starter Pack",
+      "description": "Perfect for active job seekers targeting a few specific roles.",
+      "feature1": "20 Tailored Resumes",
+      "feature2": "Company Intel Research",
+      "feature3": "ATS Keyword Analysis",
+      "feature4": "Modern Templates",
+      "feature5": "Email Support"
+    },
+    "best": {
+      "name": "Best Value",
+      "description": "Ideal for career changers and high-volume applicants.",
+      "feature1": "60 Tailored Resumes",
+      "feature2": "Priority AI Processing",
+      "feature3": "Company Culture Insights",
+      "feature4": "All Premium Templates",
+      "feature5": "Advanced ATS Simulator",
+      "feature6": "Priority Support",
+      "feature7": "Career Optimization Tools"
+    },
+    "power": {
+      "name": "Power User",
+      "description": "Unlimited potential for power users and consultants.",
+      "feature1": "150 Tailored Resumes",
+      "feature2": "Full Search Grounding",
+      "feature3": "Dedicated Career Coach AI",
+      "feature4": "White-glove Templates",
+      "feature5": "Lifetime Storage for Profile",
+      "feature6": "24/7 VIP Support"
+    }
+  },
+  "features": {
+    "title": "Features",
+    "subtitle": "Built to Optimize Every Application",
+    "description": "Resumate provides a focused set of tools designed to help job seekers create high-quality, role-specific resumes that align with modern hiring systems and recruiter expectations.",
+    "cta": "Get Started",
+    "mainFeaturesTitle": "Powerful Features",
+    "personalization": {
+      "title": "Resume Personalization Engine",
+      "description": "Automatically generate a personalized resume tailored to a specific job description.",
+      "detail1": "Uses AI to rewrite and restructure resume content based on job requirements",
+      "detail2": "Emphasizes relevant experience, skills, and keywords",
+      "detail3": "Ensures clarity, consistency, and professional tone",
+      "detail4": "Produces concise, one-page outputs suitable for most roles",
+      "detail5": "Significantly reduces time required to tailor resumes"
+    },
+    "analysis": {
+      "title": "Resume vs Job Description Analysis",
+      "description": "Understand how well your resume matches a specific role before applying.",
+      "detail1": "Identifies matching and missing keywords",
+      "detail2": "Highlights skill gaps and suggested improvements",
+      "detail3": "Computes a match score reflecting alignment with the job description",
+      "detail4": "Helps users make data-driven decisions before personalization"
+    },
+    "templates": {
+      "title": "ATS-Optimized Templates",
+      "description": "Choose from professionally designed resume templates built for Applicant Tracking Systems.",
+      "detail1": "Clean, structured layouts",
+      "detail2": "Single-column and ATS-safe options available",
+      "detail3": "Consistent headings and formatting",
+      "detail4": "Optimized for automated parsing and human readability",
+      "detail5": "Templates prioritize content over decoration"
+    },
+    "storage": {
+      "title": "Master Resume Storage",
+      "description": "Upload and store a complete master resume containing your full career history.",
+      "detail1": "Avoid repeated uploads for each application",
+      "detail2": "Generate multiple role-specific resumes from a single source",
+      "detail3": "Keep long-term career data organized and reusable",
+      "detail4": "Improves efficiency and consistency across applications"
+    },
+    "versions": {
+      "title": "Resume Version Management",
+      "description": "Save, manage, and reuse personalized resumes.",
+      "detail1": "Store multiple resume versions per job role",
+      "detail2": "View generation history and metadata",
+      "detail3": "Re-download resumes without regenerating them",
+      "detail4": "Compare versions over time for iterative improvement"
+    },
+    "export": {
+      "title": "Export & Sharing Options",
+      "description": "Easily use your personalized resume across platforms.",
+      "detail1": "Download resumes as PDF",
+      "detail2": "Copy resume content as plain text",
+      "detail3": "Consistent formatting across exports",
+      "detail4": "Ready for job portals, email applications, and further editing"
+    },
+    "performance": {
+      "title": "Fast & Secure Processing",
+      "description": "Designed with performance and privacy in mind.",
+      "detail1": "Resume generation in seconds",
+      "detail2": "Encrypted data transmission",
+      "detail3": "User-controlled storage and deletion",
+      "detail4": "No unnecessary data retention"
+    },
+    "builtFor": {
+      "title": "Designed for Modern Job Seekers",
+      "subtitle": "Resumate is built for everyone pursuing their next opportunity.",
+      "adaptability": "The platform adapts to different industries and experience levels."
+    },
+    "audience": {
+      "students": "Students and graduates",
+      "graduates": "Early-career professionals",
+      "earlyCareer": "Mid-career professionals",
+      "midCareer": "Career switchers",
+      "switchers": "High-volume job applicants",
+      "highVolume": "Everyone in between"
+    },
+    "improvements": {
+      "title": "Continuous Improvement",
+      "subtitle": "Resumate is designed as a modular system that supports future enhancements.",
+      "industry": "Industry-specific optimization",
+      "language": "Multi-language support",
+      "matching": "Job matching and recommendations",
+      "analytics": "Advanced analytics and insights"
+    },
+    "summary": {
+      "title": "Ready to Optimize Your Resume?",
+      "description": "Resumate combines AI-driven content generation, structured analysis, and professional design to help you submit better resumes with less effort and greater confidence.",
+      "cta": "Start for Free",
+      "pricing": "View Pricing"
+    }
+  },
   "footer": {
     "copyright": "© 2026 Resumate. All rights reserved.",
     "about": "About",
