@@ -64,6 +64,16 @@ function AppRoutes() {
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-of-service" element={<TermsOfService />} />
       <Route
+        path="/dashboard"
+        element={
+          <PrivateRoute>
+            <Layout>
+              <Dashboard />
+            </Layout>
+          </PrivateRoute>
+        }
+      />
+      <Route
         path="/generate"
         element={
           <PrivateRoute>
