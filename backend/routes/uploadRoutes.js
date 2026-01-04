@@ -4,7 +4,6 @@ const upload = require('../middleware/upload');
 const { extractTextFromUpload } = require('../controllers/uploadController');
 const { protect } = require('../middleware/auth');
 
-// All routes require authentication
 router.use(protect);
 
 // Route to upload a file and extract text

@@ -31,7 +31,7 @@ exports.parseCVText = (cvText) => {
     references: []
   };
 
-  // Extract name (usually the first significant line in uppercase or the largest)
+  // Extract name
   cvData.name = extractName(lines);
   
   // Extract job title
@@ -71,10 +71,9 @@ exports.parseCVText = (cvText) => {
  * Extract name
  */
 function extractName(lines) {
-  // The name is usually the first significant line
   for (const line of lines.slice(0, 5)) {
     const trimmed = line.trim();
-    // Look for a name (2-4 words, starting with uppercase)
+    // Look for a name
     if (/^[A-Z][a-z]+(\s+[A-Z][a-z]+){1,3}$/.test(trimmed) && trimmed.length < 50) {
       return trimmed;
     }
@@ -94,7 +93,7 @@ function extractJobTitle(lines, name) {
   const nameIndex = lines.findIndex(line => line.includes(name));
   if (nameIndex >= 0 && nameIndex < lines.length - 1) {
     const nextLine = lines[nameIndex + 1].trim();
-    // If it looks like a job title (not too long, not an email/phone)
+    // If it looks like a job title
     if (nextLine.length < 60 && !/@/.test(nextLine) && !/\d{3}/.test(nextLine)) {
       return nextLine;
     }
@@ -253,9 +252,9 @@ function extractProjects(text) {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
     
-    // Detect new project (no bullet, short line, no ":")
+    // Detect new project
     if (line.length > 0 && line.length < 80 && !line.startsWith('•') && !line.startsWith('-') && !line.startsWith('*')) {
-      // Check if this is a project title (not description)
+      // Check if this is a project title
       const hasDate = line.match(/\d{4}/);
       const hasBullet = line.startsWith('•') || line.startsWith('-');
       
@@ -337,10 +336,8 @@ function extractSkills(text) {
   for (const line of lines) {
     const trimmed = line.trim();
     if (trimmed && trimmed.length > 2 && trimmed.length < 200) {
-      // Enlever les puces et nettoyer
       let skill = trimmed.replace(/^[•\-*]\s*/, '').trim();
       
-      // Si la ligne contient ":", garder toute la ligne (ex: "Langages : Python, Java")
       if (skill && !skill.match(/^[A-Z\s]{10,}$/)) {
         skills.push(skill);
       }
@@ -351,7 +348,7 @@ function extractSkills(text) {
 }
 
 /**
- * Extraire les langues
+ * Extract languages
  */
 function extractLanguages(text) {
   const languages = [];

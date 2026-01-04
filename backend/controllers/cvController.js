@@ -239,7 +239,7 @@ exports.createFromScratch = async (req, res) => {
 };
 
 /**
- * Generate a CV text representation from structured data (for history)
+ * Generate a CV text representation from structured data 
  */
 function generateCVTextFromData(cvData) {
   let text = `${cvData.name}\n`;

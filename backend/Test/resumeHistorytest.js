@@ -19,7 +19,6 @@ EXPERIENCE
 Lead Developer at TechCorp | 2022-Present
 • Architected microservices using Node.js and Docker
 • Led team of 5 engineers
-
 Senior Developer at WebSolutions | 2019-2021
 • Built React applications
 • Managed MongoDB databases`;

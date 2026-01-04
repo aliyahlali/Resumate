@@ -1,5 +1,5 @@
 /**
- * Middleware de logging pour traquer toutes les requêtes
+ * Logging middleware to track all requests
  */
 const logger = (req, res, next) => {
   const timestamp = new Date().toISOString();
@@ -10,17 +10,16 @@ const logger = (req, res, next) => {
   console.log(`\n[${timestamp}] ${method} ${url}`);
   console.log(`  IP: ${ip}`);
   
-  // Logger les paramètres de query si présents
+  // Log query parameters if present
   if (Object.keys(req.query).length > 0) {
     console.log(`  Query params:`, req.query);
   }
 
-  // Logger le body pour les requêtes POST/PUT (sans le mot de passe)
-  // Ignorer les requêtes multipart/form-data (upload de fichiers)
+  // Log body for POST/PUT requests (without password)
   if ((req.method === 'POST' || req.method === 'PUT' || req.method === 'PATCH') 
       && !req.headers['content-type']?.includes('multipart/form-data')) {
     const bodyToLog = { ...req.body };
-    // Masquer le mot de passe dans les logs
+    // Hide password in logs
     if (bodyToLog.password) {
       bodyToLog.password = '***HIDDEN***';
     }
@@ -29,12 +28,12 @@ const logger = (req, res, next) => {
     }
   }
 
-  // Logger les uploads de fichiers
+  // Log file uploads
   if (req.headers['content-type']?.includes('multipart/form-data')) {
     console.log(`  File upload detected`);
   }
 
-  // Logger les headers d'autorisation (juste la présence, pas le token complet)
+  // Log authorization headers 
   if (req.headers.authorization) {
     const authHeader = req.headers.authorization;
     if (authHeader.startsWith('Bearer ')) {
@@ -45,7 +44,7 @@ const logger = (req, res, next) => {
     }
   }
 
-  // Capturer le statut de la réponse
+  // Capture response status
   const originalSend = res.send;
   res.send = function (data) {
     console.log(`  Response: ${res.statusCode} ${res.statusMessage || ''}`);

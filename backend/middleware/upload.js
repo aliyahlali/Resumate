@@ -23,9 +23,9 @@ const storage = multer.diskStorage({
 
 // Filter accepted file types
 const fileFilter = (req, file, cb) => {
-  // Accept images (PNG, JPG, JPEG)
+  // Accept images 
   const imageTypes = /jpeg|jpg|png|gif|webp/;
-  // Accept documents (PDF, DOC, DOCX)
+  // Accept documents
   const docTypes = /pdf|doc|docx/;
 
   const extname = imageTypes.test(path.extname(file.originalname).toLowerCase()) ||
@@ -46,7 +46,7 @@ const fileFilter = (req, file, cb) => {
 const upload = multer({
   storage: storage,
   limits: {
-    fileSize: 10 * 1024 * 1024, // 10MB max
+    fileSize: 10 * 1024 * 1024, 
   },
   fileFilter: fileFilter,
 });

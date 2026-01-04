@@ -8,7 +8,6 @@ dotenv.config({ path: path.join(__dirname, '..', '.env') });
 
 const createAdmin = async () => {
   try {
-    // Support both MONGO_URI and MONGODB_URI
     const mongoUri = process.env.MONGO_URI || process.env.MONGODB_URI;
     
     // Ensure MongoDB URI is defined
