@@ -8,7 +8,13 @@
 const axios = require('axios');
 require('dotenv').config();
 
+<<<<<<< HEAD
 const BASE_URL = process.env.TEST_URL || 'http://localhost:5000';
+=======
+// compute base URL using environment variables; remove hard-coded port
+const port = process.env.PORT || 5000;
+const BASE_URL = process.env.TEST_URL || `http://localhost:${port}`;
+>>>>>>> bce18cd (atlas updates)
 const TEST_EMAIL = `test_${Date.now()}@example.com`;
 const TEST_PASSWORD = 'password123';
 

@@ -16,12 +16,21 @@
     "sort": "Trier"
   },
   "nav": {
+<<<<<<< HEAD
     "dashboard": "Dashboard",
     "generate": "Generate",
     "create": "Créer à partir de zéro",
     "history": "History",
     "admin": "Admin Panel",
     "logout": "Logout"
+=======
+    "dashboard": "Tableau de bord",
+    "generate": "Générer",
+    "create": "Créer à partir de zéro",
+    "history": "Historique",
+    "admin": "Admin Panel",
+    "logout": "Se déconnecter"
+>>>>>>> bce18cd (atlas updates)
   },
   "auth": {
     "login": "Connexion",

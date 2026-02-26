@@ -1,6 +1,10 @@
 import axios from 'axios';
 
+<<<<<<< HEAD
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+=======
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+>>>>>>> bce18cd (atlas updates)
 
 // Create an axios instance with base configuration
 const api = axios.create({

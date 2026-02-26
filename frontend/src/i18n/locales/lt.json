@@ -18,6 +18,10 @@
   "nav": {
     "dashboard": "Skydelis",
     "generate": "Generuoti",
+<<<<<<< HEAD
+=======
+     "create": "kurti nuo nulio",
+>>>>>>> bce18cd (atlas updates)
     "history": "Istorija",
     "logout": "Atsijungti"
   },

@@ -8,7 +8,15 @@
 const axios = require('axios');
 require('dotenv').config();
 
+<<<<<<< HEAD
 const BASE_URL = process.env.TEST_URL || 'http://localhost:5000/api';
+=======
+// determine base URL for API tests. allow overriding with TEST_URL env var
+// fall back to localhost on the configured PORT (default 5000) so no hard
+// coded port remains in the source.
+const port = process.env.PORT || 5000;
+const BASE_URL = process.env.TEST_URL || `http://localhost:${port}/api`;
+>>>>>>> bce18cd (atlas updates)
 
 // Test data
 const testUsers = {

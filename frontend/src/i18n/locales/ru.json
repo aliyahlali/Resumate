@@ -18,6 +18,10 @@
   "nav": {
     "dashboard": "Панель",
     "generate": "Создать",
+<<<<<<< HEAD
+=======
+    "create": "создать с нуля",
+>>>>>>> bce18cd (atlas updates)
     "history": "История",
     "logout": "Выход"
   },

@@ -11,7 +11,12 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
 
+<<<<<<< HEAD
 const BASE_URL = process.env.TEST_URL || 'http://localhost:5000/api';
+=======
+const port = process.env.PORT || 5000;
+const BASE_URL = process.env.TEST_URL || `http://localhost:${port}/api`;
+>>>>>>> bce18cd (atlas updates)
 
 // Colors for console output
 const colors = {

@@ -8,7 +8,12 @@
 const axios = require('axios');
 require('dotenv').config();
 
+<<<<<<< HEAD
 const BASE_URL = process.env.TEST_URL || 'http://localhost:5000/api';
+=======
+const port = process.env.PORT || 5000;
+const BASE_URL = process.env.TEST_URL || `http://localhost:${port}/api`;
+>>>>>>> bce18cd (atlas updates)
 
 // Test data
 const testResumes = {
