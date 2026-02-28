@@ -13,6 +13,9 @@
     "test:keywords": "node Test/keywordAnalysistest.js",
     "test:history": "node Test/resumeHistorytest.js"
   },
+    "engines": {
+    "node": "18.x"
+  },
   "keywords": ["resume", "cv", "ai", "mern"],
   "author": "",
   "license": "ISC",
